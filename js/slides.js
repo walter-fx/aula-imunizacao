@@ -303,6 +303,11 @@ function bindMediaFullscreen() {
         return;
     }
 
+    const refreshMinimizedLayoutState = () => {
+        const hasMinimized = document.querySelector(".media-preview.media-minimized") !== null;
+        document.body.classList.toggle("has-minimized-media", hasMinimized);
+    };
+
     previews.forEach((preview) => {
         const media = preview.querySelector("img");
         if (!media) {
@@ -338,13 +343,16 @@ function bindMediaFullscreen() {
         const setMinimized = (value) => {
             preview.classList.toggle("media-minimized", value);
             if (expanded) {
+                refreshMinimizedLayoutState();
                 return;
             }
             if (value) {
                 moveToBody();
+                refreshMinimizedLayoutState();
                 return;
             }
             moveToOrigin();
+            refreshMinimizedLayoutState();
         };
         const clearDrag = () => {
             preview.style.removeProperty("--drag-x");
@@ -364,6 +372,7 @@ function bindMediaFullscreen() {
             preview.classList.remove("media-expanded");
             document.body.classList.remove("media-focus-mode");
             moveToOrigin();
+            refreshMinimizedLayoutState();
         };
 
         const open = () => {
@@ -475,6 +484,8 @@ function bindMediaFullscreen() {
 
         document.addEventListener("media:close", close);
     });
+
+    refreshMinimizedLayoutState();
 }
 
 function renderError(message) {

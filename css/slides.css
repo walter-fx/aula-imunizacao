@@ -1271,6 +1271,18 @@ body.media-focus-mode {
         object-fit: cover;
     }
 
+    body.has-minimized-media .slide {
+        grid-template-rows: 1fr 0 !important;
+    }
+
+    body.has-minimized-media .slide-side {
+        display: none !important;
+    }
+
+    body.has-minimized-media .slide-main {
+        height: calc(var(--app-height) - 13.2rem) !important;
+        max-height: calc(var(--app-height) - 13.2rem) !important;
+    }
 }
 
 @media (max-width: 640px) {
