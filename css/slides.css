@@ -786,7 +786,34 @@ h3 {
 
 .media-preview {
     cursor: zoom-in;
-    transition: transform 340ms cubic-bezier(0.22, 1, 0.36, 1), border-radius 340ms ease, box-shadow 340ms ease;
+    transition: transform 340ms cubic-bezier(0.22, 1, 0.36, 1), border-radius 340ms ease, box-shadow 340ms ease, opacity 240ms ease, filter 240ms ease;
+}
+
+.media-preview.media-minimized {
+    transform: scale(0.72);
+    transform-origin: top right;
+    opacity: 0.78;
+    filter: saturate(0.72);
+    cursor: pointer;
+}
+
+.media-preview.media-minimized .media-window-body,
+.media-preview.media-minimized .hero-qr-body {
+    max-height: 96px;
+    overflow: hidden;
+    padding: 0.35rem;
+}
+
+.media-preview.media-minimized .media-main-image,
+.media-preview.media-minimized .hero-site-body img:not(.hero-main-qr) {
+    min-height: 86px !important;
+    max-height: 86px !important;
+    height: 86px !important;
+}
+
+.media-preview.media-minimized .hero-main-qr {
+    width: min(100%, 110px);
+    max-width: 110px;
 }
 
 .hero-qr-body {
@@ -1208,34 +1235,6 @@ body.media-focus-mode {
     .slide-side {
         max-height: 24vh;
         overflow: hidden;
-        transform: translateY(var(--media-drag-y, 0px));
-        transition: transform 220ms ease;
-        touch-action: pan-y;
-        will-change: transform;
-    }
-
-    .slide-side.media-dragging-local {
-        transition: none;
-    }
-
-    .slide-side::after {
-        content: "arraste a imagem";
-        position: absolute;
-        right: 0.5rem;
-        bottom: 0.45rem;
-        z-index: 2;
-        padding: 0.15rem 0.42rem;
-        border-radius: 999px;
-        font-size: 0.68rem;
-        font-weight: 700;
-        color: #245581;
-        background: rgba(255, 255, 255, 0.86);
-        border: 1px solid #d6e6fb;
-        pointer-events: none;
-    }
-
-    .slide-side.media-collapsed::after {
-        content: "imagem minimizada";
     }
 
     .slide-side .hero-site-topbar {
@@ -1251,13 +1250,6 @@ body.media-focus-mode {
         object-fit: cover;
     }
 
-    .slide-side .media-preview,
-    .slide-side .media-window-body,
-    .slide-side .media-main-image,
-    .slide-side .hero-site-body img:not(.hero-main-qr),
-    .slide-side .image-frame img {
-        pointer-events: none;
-    }
 }
 
 @media (max-width: 640px) {
@@ -1272,10 +1264,6 @@ body.media-focus-mode {
 
     .slide-side {
         max-height: 19vh;
-    }
-
-    .slide-side::after {
-        font-size: 0.62rem;
     }
 
     .slide-side .media-main-image,

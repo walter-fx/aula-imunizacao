@@ -106,9 +106,6 @@ async function initDeck() {
         if (document.body.classList.contains("media-focus-mode")) {
             return;
         }
-        if (window.__blockSlideSwipeUntil && Date.now() < window.__blockSlideSwipeUntil) {
-            return;
-        }
         const delta = startY - event.changedTouches[0].clientY;
         if (Math.abs(delta) < 45) {
             return;
@@ -118,7 +115,6 @@ async function initDeck() {
 
     bindQuizToggle();
     bindMediaFullscreen();
-    bindMobileImageDrag();
     slideHeight = window.innerHeight;
     goTo(0);
 }
@@ -286,8 +282,13 @@ function bindMediaFullscreen() {
         let startY = 0;
         let dx = 0;
         let dy = 0;
+        let clickTimer = null;
         const originalParent = preview.parentElement;
         const originalNext = preview.nextSibling;
+        const isMinimized = () => preview.classList.contains("media-minimized");
+        const setMinimized = (value) => {
+            preview.classList.toggle("media-minimized", value);
+        };
 
         const clearDrag = () => {
             preview.style.removeProperty("--drag-x");
@@ -319,24 +320,58 @@ function bindMediaFullscreen() {
             if (expanded) {
                 return;
             }
+            setMinimized(false);
             expanded = true;
             document.body.appendChild(preview);
             preview.classList.add("media-expanded");
             document.body.classList.add("media-focus-mode");
         };
 
-        const toggle = () => {
-            expanded ? close() : open();
+        const runSingleClickAction = () => {
+            if (expanded) {
+                close();
+                return;
+            }
+            if (isMinimized()) {
+                setMinimized(false);
+                return;
+            }
+            open();
         };
 
         media.addEventListener("click", (event) => {
             event.stopPropagation();
-            toggle();
+            if (clickTimer) {
+                clearTimeout(clickTimer);
+            }
+            clickTimer = setTimeout(() => {
+                clickTimer = null;
+                runSingleClickAction();
+            }, 220);
+        });
+
+        media.addEventListener("dblclick", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            if (clickTimer) {
+                clearTimeout(clickTimer);
+                clickTimer = null;
+            }
+            if (expanded) {
+                return;
+            }
+            if (!isMinimized()) {
+                setMinimized(true);
+            }
         });
 
         preview.addEventListener("click", () => {
             if (expanded) {
                 close();
+                return;
+            }
+            if (isMinimized()) {
+                setMinimized(false);
             }
         });
 
@@ -382,122 +417,6 @@ function bindMediaFullscreen() {
         });
 
         document.addEventListener("media:close", close);
-    });
-}
-
-function bindMobileImageDrag() {
-    const mobileMq = window.matchMedia("(max-width: 1024px)");
-    const sides = Array.from(document.querySelectorAll(".slide-side"));
-    if (!sides.length) {
-        return;
-    }
-
-    sides.forEach((side) => {
-        side.style.removeProperty("--media-drag-y");
-        side.classList.remove("media-collapsed");
-
-        let dragging = false;
-        let moved = false;
-        let startY = 0;
-        let startOffset = 0;
-        let currentOffset = 0;
-
-        const getMaxOffset = () => Math.max(0, side.offsetHeight - 34);
-        const applyOffset = (value) => {
-            currentOffset = Math.max(0, Math.min(getMaxOffset(), value));
-            side.style.setProperty("--media-drag-y", `${currentOffset}px`);
-        };
-
-        const snap = () => {
-            const maxOffset = getMaxOffset();
-            const shouldCollapse = currentOffset > maxOffset * 0.42;
-            applyOffset(shouldCollapse ? maxOffset : 0);
-            side.classList.toggle("media-collapsed", shouldCollapse);
-        };
-
-        const beginDrag = (clientY) => {
-            dragging = true;
-            moved = false;
-            startY = clientY;
-            startOffset = currentOffset;
-            side.classList.add("media-dragging-local");
-        };
-
-        const updateDrag = (clientY) => {
-            if (!dragging || !mobileMq.matches) {
-                return;
-            }
-            const delta = clientY - startY;
-            if (Math.abs(delta) > 4) {
-                moved = true;
-                window.__blockSlideSwipeUntil = Date.now() + 320;
-            }
-            applyOffset(startOffset + delta);
-        };
-
-        const endDrag = () => {
-            if (!dragging) {
-                return;
-            }
-            dragging = false;
-            side.classList.remove("media-dragging-local");
-            if (moved) {
-                snap();
-            }
-        };
-
-        side.addEventListener("pointerdown", (event) => {
-            if (!mobileMq.matches || document.body.classList.contains("media-focus-mode")) {
-                return;
-            }
-            beginDrag(event.clientY);
-            side.setPointerCapture?.(event.pointerId);
-        });
-
-        side.addEventListener("pointermove", (event) => {
-            updateDrag(event.clientY);
-        });
-
-        side.addEventListener("pointerup", (event) => {
-            if (!mobileMq.matches) {
-                return;
-            }
-            side.releasePointerCapture?.(event.pointerId);
-            endDrag();
-        });
-
-        side.addEventListener("pointercancel", () => {
-            endDrag();
-        });
-
-        side.addEventListener("touchstart", (event) => {
-            if (!mobileMq.matches || document.body.classList.contains("media-focus-mode")) {
-                return;
-            }
-            beginDrag(event.changedTouches[0].clientY);
-        }, { passive: true });
-
-        side.addEventListener("touchmove", (event) => {
-            if (!dragging || !mobileMq.matches) {
-                return;
-            }
-            updateDrag(event.changedTouches[0].clientY);
-            event.preventDefault();
-        }, { passive: false });
-
-        side.addEventListener("touchend", () => {
-            endDrag();
-        }, { passive: true });
-
-        side.addEventListener("dblclick", () => {
-            if (!mobileMq.matches) {
-                return;
-            }
-            const maxOffset = getMaxOffset();
-            const collapsed = side.classList.contains("media-collapsed");
-            applyOffset(collapsed ? 0 : maxOffset);
-            side.classList.toggle("media-collapsed", !collapsed);
-        });
     });
 }
 
