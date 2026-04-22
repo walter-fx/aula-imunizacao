@@ -1236,6 +1236,8 @@ body.media-focus-mode {
         grid-template-columns: 1fr !important;
         grid-template-rows: minmax(0, 1fr) auto;
         gap: 0.55rem;
+        align-content: center !important;
+        align-items: center !important;
     }
 
     .slide.layout-focus-left,
@@ -1253,6 +1255,7 @@ body.media-focus-mode {
     .slide-main {
         max-height: calc(var(--app-height) - 15rem);
         overflow: auto;
+        align-self: center !important;
     }
 
     .slide-side {
