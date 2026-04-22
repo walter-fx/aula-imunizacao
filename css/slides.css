@@ -765,6 +765,7 @@ h3 {
     height: min(58vh, 500px);
     object-fit: cover;
     display: block;
+    border-radius: 0 0 1.1rem 1.1rem;
 }
 
 .media-window-body {
@@ -773,6 +774,7 @@ h3 {
     place-items: center;
     background: #ffffff;
     border-radius: 0 0 1.1rem 1.1rem;
+    overflow: hidden;
 }
 
 .media-main-image {
@@ -780,6 +782,7 @@ h3 {
     height: min(58vh, 500px);
     object-fit: cover;
     display: block;
+    border-radius: 0 0 1.1rem 1.1rem;
 }
 
 .hero-qr-preview {
@@ -837,6 +840,7 @@ h3 {
     place-items: center;
     padding: 1rem;
     border-radius: 0 0 1.1rem 1.1rem;
+    overflow: hidden;
     background:
         linear-gradient(145deg, rgba(248, 252, 255, 0.9), rgba(238, 246, 255, 0.9)),
         url("../assets/img/image.png") center/cover no-repeat;
