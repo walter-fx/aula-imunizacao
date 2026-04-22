@@ -163,8 +163,7 @@
         "Contêm agente vivo com virulência reduzida",
         "Geralmente induzem boa memória imune com menos doses",
         "Exigem atenção em imunossuprimidos e gestantes",
-        "Exemplos no PNI: tríplice viral, varicela, febre amarela",
-        "Contraindicação principal: imunossupressão importante e gestação (além de anafilaxia prévia a dose/componente)"
+        "Exemplos no PNI: tríplice viral, varicela, febre amarela"
       ],
       "chips": [
         "Alta imunogenicidade",
@@ -183,8 +182,7 @@
         "Não possuem microrganismo viável para replicação",
         "Perfil de segurança amplo para grupos especiais",
         "Podem demandar reforços para manter proteção",
-        "Exemplos: hepatite A, raiva, VIP, influenza inativada",
-        "Contraindicação principal: anafilaxia após dose anterior ou alergia grave a componente; em doença febril moderada/grave, adiar"
+        "Exemplos: hepatite A, raiva, VIP, influenza inativada"
       ],
       "chips": [
         "Sem replicação",
@@ -203,8 +201,7 @@
         "Usam toxinas inativadas (toxoides) como antígeno",
         "Objetivo principal: neutralizar o efeito tóxico",
         "Esquema com doses e reforços ao longo do tempo",
-        "Exemplos: dT, dTpa e vacinas contendo componente tetânico/diftérico",
-        "Contraindicação principal: anafilaxia prévia a dose/componente; para vacina com pertussis, avaliar encefalopatia pós-dose anterior"
+        "Exemplos: dT, dTpa e vacinas contendo componente tetânico/diftérico"
       ],
       "chips": [
         "Foco anti-toxina",
@@ -223,8 +220,7 @@
         "Não utilizam o patógeno completo",
         "Produção padronizada com boa segurança",
         "Indicação conforme faixa etária e calendário",
-        "Exemplos: hepatite B e HPV recombinante",
-        "Contraindicação principal: anafilaxia após dose anterior ou alergia grave a componente da formulação"
+        "Exemplos: hepatite B e HPV recombinante"
       ],
       "chips": [
         "Biotecnologia",
@@ -243,8 +239,7 @@
         "Melhoram imunogenicidade, principalmente em crianças pequenas",
         "Reduzem doença invasiva por bactérias encapsuladas",
         "Esquema com doses primárias e reforço",
-        "Exemplos: pneumocócica conjugada e meningocócicas conjugadas",
-        "Contraindicação principal: anafilaxia prévia a dose/componente; doença febril moderada/grave indica adiamento"
+        "Exemplos: pneumocócica conjugada e meningocócicas conjugadas"
       ],
       "chips": [
         "Resposta aumentada",
@@ -263,8 +258,7 @@
         "Não alteram DNA e não contêm vírus vivo",
         "Geram resposta imune com alta efetividade em cenários específicos",
         "Podem exigir reforços conforme atualização epidemiológica",
-        "Exemplo: vacinas contra COVID-19 baseadas em mRNA",
-        "Contraindicação principal: anafilaxia após dose anterior ou alergia grave a componente (ex.: PEG); avaliar adiamento em miocardite/pericardite ativa"
+        "Exemplo: vacinas contra COVID-19 baseadas em mRNA"
       ],
       "chips": [
         "Tecnologia recente",
