@@ -922,9 +922,9 @@ body.media-focus-mode {
         position: fixed;
         left: 0;
         right: 0;
-        top: 50%;
-        bottom: auto;
-        transform: translateY(-50%);
+        bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px));
+        top: auto;
+        transform: none;
         width: 100%;
         background: transparent;
         border: 0;
@@ -932,6 +932,7 @@ body.media-focus-mode {
         padding: 0;
         display: block;
         pointer-events: none;
+        z-index: 12;
     }
 
     #prevBtn,
@@ -954,7 +955,7 @@ body.media-focus-mode {
     .ctrl-center {
         position: fixed;
         left: 50%;
-        bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+        bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px));
         transform: translateX(-50%);
         width: calc(100% - 7rem);
         max-width: 420px;
@@ -1118,10 +1119,10 @@ body.media-focus-mode {
     }
 
     .deck-controls {
-        width: calc(100% - 0.75rem);
-        border-radius: 0.8rem;
-        padding: 0.4rem;
-        gap: 0.4rem;
+        width: 100%;
+        border-radius: 0;
+        padding: 0;
+        gap: 0;
     }
 }
 
@@ -1202,6 +1203,14 @@ body.media-focus-mode {
         min-height: 110px;
         max-height: 170px;
         object-fit: cover;
+    }
+
+    .slide-side .media-preview,
+    .slide-side .media-window-body,
+    .slide-side .media-main-image,
+    .slide-side .hero-site-body img:not(.hero-main-qr),
+    .slide-side .image-frame img {
+        pointer-events: none;
     }
 }
 
