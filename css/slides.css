@@ -134,14 +134,19 @@ body {
 }
 
 .slide-main {
-    background: var(--surface);
+    background: linear-gradient(180deg, #ffffff, #f8fcff);
     border: 1px solid var(--stroke);
+    border-left: 8px solid var(--brand-2);
     border-radius: 1.25rem;
     padding: clamp(1rem, 2.1vw, 2rem);
     box-shadow: var(--shadow);
     transform: translateY(34px) scale(0.98);
     opacity: 0;
     transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1), opacity 700ms ease;
+}
+
+.slide.layout-references-wall .slide-main {
+    border-left: 1px solid var(--stroke);
 }
 
 .slide-side {
@@ -154,6 +159,50 @@ body {
 .slide.is-active .slide-side {
     transform: translateY(0) translateX(0) rotate(0deg) scale(1);
     opacity: 1;
+}
+
+.slide.is-active.layout-hero-wave .slide-main {
+    animation: enterHeroMain 640ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide.is-active.layout-hero-wave .slide-side {
+    animation: enterHeroSide 760ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide.is-active.layout-split-cards .slide-main {
+    animation: enterLift 560ms ease-out;
+}
+
+.slide.is-active.layout-focus-left .slide-main {
+    animation: enterFromLeft 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide.is-active.layout-grid-poster .slide-main {
+    animation: enterZoomCard 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide.is-active.layout-timeline-soft .slide-main {
+    animation: enterSweep 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide.is-active.layout-highlight-banner .slide-main {
+    animation: enterTilt 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide.is-active.layout-image-frame .slide-main {
+    animation: enterGlow 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide.is-active.layout-case-columns .slide-main {
+    animation: enterCaseDeck 680ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide.is-active.layout-quiz-accordion .slide-main {
+    animation: enterQuiz 640ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide.is-active.layout-references-wall .slide-main {
+    animation: enterReferences 560ms ease-out;
 }
 
 .slide.is-before .slide-main {
@@ -422,10 +471,6 @@ h3 {
     animation-delay: 2.1s;
 }
 
-.layout-split-cards .slide-main {
-    background: linear-gradient(180deg, #ffffff, #f8fcff);
-}
-
 .slide.layout-hero-wave h1 {
     font-size: clamp(2rem, 4.2vw, 3.8rem);
 }
@@ -446,28 +491,8 @@ h3 {
     grid-template-columns: 1.25fr 0.95fr;
 }
 
-.layout-grid-poster .slide-main {
-    border-top: 8px solid var(--brand);
-}
-
-.layout-timeline-soft .slide-main {
-    border-left: 8px solid #75aef8;
-}
-
-.layout-highlight-banner .slide-main {
-    background: linear-gradient(145deg, #ffffff 10%, #fff7ec 100%);
-}
-
 .layout-image-frame .slide-side {
     transform: translateX(50px) rotate(1deg);
-}
-
-.layout-case-columns .slide-main {
-    background: linear-gradient(155deg, #ffffff 0%, #f3fbff 100%);
-}
-
-.layout-references-wall .slide-main {
-    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
 }
 
 .rail {
@@ -586,6 +611,62 @@ h3 {
         transform: scale(1.65);
         opacity: 0;
     }
+}
+
+@keyframes enterHeroMain {
+    from { opacity: 0; transform: translateY(30px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes enterHeroSide {
+    from { opacity: 0; transform: translateX(40px) scale(0.92); }
+    to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes enterLift {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes enterFromLeft {
+    from { opacity: 0; transform: translateX(-36px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes enterZoomCard {
+    from { opacity: 0; transform: scale(0.93); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes enterSweep {
+    from { opacity: 0; transform: translateX(22px); filter: blur(2px); }
+    to { opacity: 1; transform: translateX(0); filter: blur(0); }
+}
+
+@keyframes enterTilt {
+    from { opacity: 0; transform: rotate(-1.4deg) translateY(18px); }
+    to { opacity: 1; transform: rotate(0deg) translateY(0); }
+}
+
+@keyframes enterGlow {
+    from { opacity: 0; box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    to { opacity: 1; box-shadow: var(--shadow); }
+}
+
+@keyframes enterCaseDeck {
+    from { opacity: 0; transform: translateY(20px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes enterQuiz {
+    from { opacity: 0; transform: translateY(24px) scale(0.98); }
+    60% { transform: translateY(-4px) scale(1.01); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes enterReferences {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes clockBlink {
