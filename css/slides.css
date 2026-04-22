@@ -790,10 +790,9 @@ h3 {
 }
 
 .media-preview.media-minimized {
-    transform: scale(0.72);
-    transform-origin: top right;
-    opacity: 0.78;
-    filter: saturate(0.72);
+    transform: none;
+    opacity: 0.82;
+    filter: saturate(0.78);
     cursor: pointer;
 }
 
@@ -814,6 +813,18 @@ h3 {
 .media-preview.media-minimized .hero-main-qr {
     width: min(100%, 110px);
     max-width: 110px;
+}
+
+@media (max-width: 1024px) {
+    .slide-side .media-preview.media-minimized {
+        position: absolute;
+        top: 0.22rem;
+        right: 0.22rem;
+        width: min(42vw, 180px);
+        max-width: 180px;
+        z-index: 3;
+        box-shadow: 0 8px 18px rgba(36, 78, 128, 0.2);
+    }
 }
 
 .hero-qr-body {
@@ -1166,46 +1177,50 @@ body.media-focus-mode {
 @media (max-width: 1024px) {
     .deck-controls {
         position: fixed !important;
-        left: 0 !important;
-        right: 0 !important;
+        left: 50% !important;
+        right: auto !important;
         bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px)) !important;
         top: auto !important;
-        transform: none !important;
-        width: 100% !important;
-        background: transparent !important;
-        border: 0 !important;
-        box-shadow: none !important;
-        padding: 0 !important;
-        display: block !important;
-        pointer-events: none !important;
-        z-index: 12 !important;
+        transform: translateX(-50%) !important;
+        width: calc(100% - 0.9rem) !important;
+        max-width: 560px !important;
+        background: rgba(255, 255, 255, 0.96) !important;
+        border: 1px solid #d6e5f7 !important;
+        box-shadow: 0 10px 26px rgba(34, 77, 136, 0.18) !important;
+        border-radius: 0.9rem !important;
+        padding: 0.42rem !important;
+        display: grid !important;
+        grid-template-columns: auto 1fr auto !important;
+        align-items: center !important;
+        gap: 0.42rem !important;
+        pointer-events: auto !important;
+        z-index: 14 !important;
     }
 
     #prevBtn,
     #nextBtn {
-        position: fixed !important;
+        position: static !important;
         top: auto !important;
-        bottom: calc(0.55rem + env(safe-area-inset-bottom, 0px)) !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
         transform: none !important;
-        z-index: 12 !important;
+        z-index: auto !important;
         pointer-events: auto !important;
     }
 
-    #prevBtn { left: 0.35rem !important; }
-    #nextBtn { right: 0.35rem !important; }
-
     .ctrl-center {
-        position: fixed !important;
-        left: 50% !important;
-        bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px)) !important;
-        transform: translateX(-50%) !important;
-        width: calc(100% - 7rem) !important;
-        max-width: 420px !important;
-        background: rgba(255, 255, 255, 0.92) !important;
-        border: 1px solid #d6e5f7 !important;
-        border-radius: 0.72rem !important;
-        padding: 0.34rem 0.44rem !important;
-        z-index: 12 !important;
+        position: static !important;
+        left: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: none !important;
+        background: transparent !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        z-index: auto !important;
         pointer-events: auto !important;
     }
 
@@ -1272,6 +1287,20 @@ body.media-focus-mode {
         height: 16vh !important;
         min-height: 90px;
         max-height: 130px;
+    }
+}
+
+/* Keep minimized media away from bottom controls on mobile */
+@media (max-width: 1024px) {
+    .media-preview.media-minimized {
+        position: fixed !important;
+        top: calc(4.2rem + env(safe-area-inset-top, 0px)) !important;
+        right: 0.55rem !important;
+        left: auto !important;
+        bottom: auto !important;
+        width: min(44vw, 190px) !important;
+        max-width: 190px !important;
+        z-index: 18 !important;
     }
 }
 
