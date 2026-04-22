@@ -34,12 +34,45 @@ async function initDeck() {
     let current = 0;
     let wheelLock = false;
     let slideHeight = window.innerHeight;
+    const getSlideNodes = () => Array.from(deck.querySelectorAll(".slide"));
+    const syncMinimizedPreviewToActiveSlide = () => {
+        if (document.body.classList.contains("media-focus-mode")) {
+            return;
+        }
+
+        const slidesNodes = getSlideNodes();
+        const activeSlide = slidesNodes[current];
+        const activePreview = activeSlide?.querySelector("[data-media-preview]");
+        if (!activePreview) {
+            return;
+        }
+
+        const minimizedPreviews = Array.from(document.querySelectorAll(".media-preview.media-minimized"));
+        if (!minimizedPreviews.length) {
+            return;
+        }
+
+        minimizedPreviews.forEach((preview) => {
+            if (preview === activePreview) {
+                return;
+            }
+            if (preview.__media?.setMinimized) {
+                preview.__media.setMinimized(false);
+                return;
+            }
+            preview.classList.remove("media-minimized");
+        });
+
+        if (!activePreview.classList.contains("media-minimized") && activePreview.__media?.setMinimized) {
+            activePreview.__media.setMinimized(true);
+        }
+    };
 
     function goTo(index) {
         current = clamp(index, 0, slides.length - 1);
         deck.style.transform = `translateY(-${current * slideHeight}px)`;
 
-        Array.from(deck.querySelectorAll(".slide")).forEach((node, idx) => {
+        getSlideNodes().forEach((node, idx) => {
             node.classList.toggle("is-active", idx === current);
             node.classList.toggle("is-before", idx < current);
             node.classList.toggle("is-after", idx > current);
@@ -51,6 +84,7 @@ async function initDeck() {
         progress.style.setProperty("--w", `${((current + 1) / slides.length) * 100}%`);
         prevBtn.disabled = current === 0;
         nextBtn.disabled = current === slides.length - 1;
+        syncMinimizedPreviewToActiveSlide();
     }
 
     function next() { goTo(current + 1); }
@@ -312,7 +346,6 @@ function bindMediaFullscreen() {
             }
             moveToOrigin();
         };
-
         const clearDrag = () => {
             preview.style.removeProperty("--drag-x");
             preview.style.removeProperty("--drag-y");
@@ -342,6 +375,13 @@ function bindMediaFullscreen() {
             document.body.appendChild(preview);
             preview.classList.add("media-expanded");
             document.body.classList.add("media-focus-mode");
+        };
+        preview.__media = {
+            setMinimized,
+            isMinimized,
+            isExpanded: () => expanded,
+            open,
+            close
         };
 
         const runSingleClickAction = () => {
