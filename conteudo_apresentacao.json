@@ -193,10 +193,22 @@
       "subtitulo": "Base técnica utilizada na aula",
       "imagem": "https://phil.cdc.gov/PHIL_Images/17506/17506_lores.jpg",
       "referencias": [
-        "Brasil. Ministério da Saúde. Manual - Normas e Procedimentos para Vacinação. 2ª ed. revisada, 2024.",
-        "Brasil. Ministério da Saúde. Manual de vigilância epidemiológica de eventos adversos pós-vacinação. 4ª ed. atualizada, 2021/2023.",
-        "Brasil. Ministério da Saúde (SVS). Manual de vigilância epidemiológica de eventos adversos pós-vacinação. 4ª ed., 2020.",
-        "Ministério da Saúde. Portal oficial de manuais de vacinação e imunização."
+        {
+          "titulo": "Manual de Normas e Procedimentos para Vacinação (Ministério da Saúde)",
+          "url": "https://www.gov.br/saude/pt-br/vacinacao/publicacoes/manual-de-normas-e-procedimentos-para-vacinacao"
+        },
+        {
+          "titulo": "Manual de Vigilância Epidemiológica de Eventos Adversos Pós-Vacinação (Ministério da Saúde)",
+          "url": "https://www.gov.br/saude/pt-br/vacinacao/publicacoes/manual-de-vigilancia-epidemiologica-de-eventos-adversos-pos-vacinacao"
+        },
+        {
+          "titulo": "Calendário Nacional de Vacinação (PNI)",
+          "url": "https://www.gov.br/saude/pt-br/vacinacao/calendario"
+        },
+        {
+          "titulo": "Portal oficial de Vacinação do Ministério da Saúde",
+          "url": "https://www.gov.br/saude/pt-br/vacinacao"
+        }
       ]
     }
   ]

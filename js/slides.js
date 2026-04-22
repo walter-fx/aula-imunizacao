@@ -248,7 +248,7 @@ function renderSlide(slide, index, meta) {
     if (layout === "references-wall") {
         mainBody = `
             <div class="references-grid">
-                ${(slide.referencias || []).map((r) => `<article class="ref-card">${escapeHtml(r)}</article>`).join("")}
+                ${(slide.referencias || []).map((r) => renderReference(r)).join("")}
             </div>
         `;
     }
@@ -313,6 +313,25 @@ function renderBullets(items) {
         return "";
     }
     return `<ul class="bullet-list">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+}
+
+function renderReference(item) {
+    if (!item) {
+        return "";
+    }
+
+    if (typeof item === "object" && item.url) {
+        const label = escapeHtml(item.titulo || item.label || item.url);
+        const url = escapeHtml(item.url);
+        return `
+            <article class="ref-card">
+                <a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>
+            </article>
+        `;
+    }
+
+    const text = escapeHtml(String(item));
+    return `<article class="ref-card">${text}</article>`;
 }
 
 function renderChips(items) {

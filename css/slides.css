@@ -425,6 +425,17 @@ h3 {
     line-height: 1.35;
 }
 
+.ref-card a {
+    color: #1f4f86;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.ref-card a:hover,
+.ref-card a:focus-visible {
+    text-decoration: underline;
+}
+
 .hero-art {
     position: relative;
     border-radius: 1.3rem;
