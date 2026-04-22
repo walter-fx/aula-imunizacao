@@ -111,6 +111,26 @@
       ]
     },
     {
+      "id": "gestantes",
+      "layout": "split-cards",
+      "kicker": "GRUPO ESPECIAL",
+      "titulo": "Vacinação em gestantes",
+      "subtitulo": "Conduta segura para proteger mãe e bebê",
+      "imagem": "https://phil.cdc.gov/PHIL_Images/9417/9417_lores.jpg",
+      "bullets": [
+        "Priorizar vacinas recomendadas na gestação conforme protocolo vigente",
+        "dTpa: indicar em cada gestação, na janela recomendada",
+        "Influenza: pode ser aplicada em qualquer fase gestacional",
+        "Vacinas vivas atenuadas: em geral contraindicadas durante a gestação",
+        "Se houver adiamento, registrar e programar a vacinação no puerpério"
+      ],
+      "chips": [
+        "Proteção materna",
+        "Proteção neonatal",
+        "Conduta protocolada"
+      ]
+    },
+    {
       "id": "casos",
       "layout": "case-columns",
       "kicker": "",
