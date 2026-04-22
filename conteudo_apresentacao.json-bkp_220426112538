@@ -153,26 +153,6 @@
       ]
     },
     {
-      "id": "antigeno",
-      "layout": "split-cards",
-      "kicker": "CONCEITO-CHAVE",
-      "titulo": "O que é antígeno?",
-      "subtitulo": "Elemento que o sistema imune reconhece como alvo de resposta",
-      "imagem": "https://phil.cdc.gov/PHIL_Images/9418/9418_lores.jpg",
-      "bullets": [
-        "Antígeno é uma substância capaz de ser reconhecida pelo sistema imunológico",
-        "Pode ser parte de vírus, bactéria, toxina ou proteína produzida em laboratório",
-        "Ao identificar o antígeno, o organismo produz anticorpos e ativa células de defesa",
-        "Vacinas apresentam antígenos de forma segura para treinar a resposta imune",
-        "Esse treino reduz risco de formas graves quando houver contato real com o agente"
-      ],
-      "chips": [
-        "Reconhecimento imune",
-        "Produção de anticorpos",
-        "Base da vacinação"
-      ]
-    },
-    {
       "id": "tipo-viva-atenuada",
       "layout": "split-cards",
       "kicker": "TIPOS DE VACINA",
