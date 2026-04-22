@@ -791,9 +791,10 @@ h3 {
 
 .media-preview.media-minimized {
     transform: none;
-    opacity: 0.82;
+    opacity: 0.76;
     filter: saturate(0.78);
     cursor: pointer;
+    backdrop-filter: blur(3px);
 }
 
 .media-preview.media-minimized .media-window-body,
@@ -801,6 +802,7 @@ h3 {
     max-height: 96px;
     overflow: hidden;
     padding: 0.35rem;
+    background: rgba(255, 255, 255, 0.68);
 }
 
 .media-preview.media-minimized .media-main-image,
