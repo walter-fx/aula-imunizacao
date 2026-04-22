@@ -1,0 +1,173 @@
+﻿{
+  "aula": {
+    "titulo": "Imunização Segura na Prática",
+    "subtitulo": "Contraindicações, adiamento vacinal e EAPV em decisões clínicas",
+    "carga_horaria": "3 horas",
+    "publico": "Profissionais e estudantes da área da saúde",
+    "mensagem_abertura": "A proposta é decidir com segurança, comunicar com clareza e proteger o paciente sem atrasos desnecessários."
+  },
+  "slides": [
+    {
+      "id": "s1",
+      "titulo": "Abertura",
+      "subtitulo": "Por que esta aula importa na rotina",
+      "duracao_min": 10,
+      "tipo": "intro",
+      "imagem": "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1400&q=80",
+      "bullets": [
+        "Vacinação é uma das estratégias mais custo-efetivas em saúde pública.",
+        "Erro mais comum: confundir contraindicação verdadeira com situação de adiamento.",
+        "Meta da aula: reduzir oportunidades perdidas de vacinação com decisão baseada em evidência."
+      ]
+    },
+    {
+      "id": "s2",
+      "titulo": "Objetivos da Sessão",
+      "subtitulo": "O que você precisa dominar ao final",
+      "duracao_min": 10,
+      "tipo": "objetivos",
+      "imagem": "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1400&q=80",
+      "bullets": [
+        "Identificar contraindicações absolutas x falsas contraindicações.",
+        "Aplicar critérios de adiamento vacinal por quadro clínico.",
+        "Reconhecer e conduzir EAPV com fluxo de notificação.",
+        "Comunicar risco-benefício de forma simples para paciente e família."
+      ]
+    },
+    {
+      "id": "s3",
+      "titulo": "Fundamentos Essenciais",
+      "subtitulo": "Princípios para decidir com segurança",
+      "duracao_min": 15,
+      "tipo": "conceito",
+      "imagem": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=1400&q=80",
+      "bullets": [
+        "Avaliar sempre: risco da doença, benefício da vacina e condição atual do paciente.",
+        "Contraindicação é exceção; regra é vacinar no tempo oportuno.",
+        "História clínica dirigida e checagem rápida evitam atrasos indevidos."
+      ]
+    },
+    {
+      "id": "s4",
+      "titulo": "Calendário e Oportunidade",
+      "subtitulo": "Atualização de esquema sem perder chance",
+      "duracao_min": 15,
+      "tipo": "pratica",
+      "imagem": "https://images.unsplash.com/photo-1612277795421-9bc7706a4a18?auto=format&fit=crop&w=1400&q=80",
+      "bullets": [
+        "Esquema atrasado: não reiniciar série, apenas completar doses pendentes.",
+        "Coadministração é estratégia-chave para ampliar cobertura.",
+        "Aproveitar cada contato com o serviço para revisar caderneta."
+      ]
+    },
+    {
+      "id": "s5",
+      "titulo": "Contraindicações Verdadeiras",
+      "subtitulo": "Quando não vacinar ou discutir alternativa",
+      "duracao_min": 20,
+      "tipo": "critico",
+      "imagem": "https://images.unsplash.com/photo-1580281657521-47f249e8f4df?auto=format&fit=crop&w=1400&q=80",
+      "bullets": [
+        "Anafilaxia prévia ao componente vacinal: contraindicação para nova dose daquele imunizante.",
+        "Imunodeficiência grave e vacinas de vírus/bactéria vivos atenuados: avaliar individualmente.",
+        "Gestação: atenção especial para vacinas vivas atenuadas.",
+        "Documento institucional deve orientar decisão final e registro."
+      ]
+    },
+    {
+      "id": "s6",
+      "titulo": "Adiamento Vacinal",
+      "subtitulo": "Situações temporárias mais frequentes",
+      "duracao_min": 15,
+      "tipo": "pratica",
+      "imagem": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80",
+      "bullets": [
+        "Febre alta e doença aguda moderada/grave: postergar até estabilização clínica.",
+        "Uso recente de imunoglobulina pode alterar resposta de vacinas específicas.",
+        "Quadros leves sem febre importante, em geral, não impedem vacinação."
+      ]
+    },
+    {
+      "id": "s7",
+      "titulo": "EAPV na Prática",
+      "subtitulo": "Reconhecer, conduzir e notificar",
+      "duracao_min": 20,
+      "tipo": "critico",
+      "imagem": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1400&q=80",
+      "bullets": [
+        "Classificar evento por gravidade, temporalidade e plausibilidade.",
+        "Garantir conduta imediata quando necessário e orientar sinais de alerta.",
+        "Notificar no sistema correspondente e registrar conduta no prontuário.",
+        "Comunicação clara reduz medo e melhora adesão às próximas doses."
+      ]
+    },
+    {
+      "id": "s8",
+      "titulo": "Técnica e Cadeia de Frio",
+      "subtitulo": "Qualidade da aplicação e conservação",
+      "duracao_min": 15,
+      "tipo": "procedimento",
+      "imagem": "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=1400&q=80",
+      "bullets": [
+        "Conferir imunizante, lote, validade e via correta antes da aplicação.",
+        "Atenção ao armazenamento e monitoramento de temperatura.",
+        "Erro programático também é evento a ser analisado e prevenido."
+      ]
+    },
+    {
+      "id": "s9",
+      "titulo": "Caso 1",
+      "subtitulo": "Lactente com febre baixa e tosse leve no dia da vacina",
+      "duracao_min": 20,
+      "tipo": "caso",
+      "imagem": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1400&q=80",
+      "bullets": [
+        "Situação: 7 meses, afebril no momento, sem desconforto respiratório.",
+        "Pergunta: manter vacinação prevista hoje?",
+        "Resposta esperada: sim, manter; quadro leve isolado geralmente não contraindica.",
+        "Ponto didático: evitar perda de oportunidade vacinal por falso impedimento."
+      ]
+    },
+    {
+      "id": "s10",
+      "titulo": "Caso 2",
+      "subtitulo": "Adulto com história de reação grave após dose anterior",
+      "duracao_min": 20,
+      "tipo": "caso",
+      "imagem": "https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?auto=format&fit=crop&w=1400&q=80",
+      "bullets": [
+        "Situação: urticária difusa e dispneia minutos após vacinação prévia.",
+        "Pergunta: revacinar automaticamente na sala de rotina?",
+        "Resposta esperada: não; investigar componente, avaliar risco e conduzir em ambiente adequado.",
+        "Ponto didático: segurança e documentação completa da decisão clínica."
+      ]
+    },
+    {
+      "id": "s11",
+      "titulo": "Caso 3",
+      "subtitulo": "Gestante e dúvidas sobre vacinas permitidas",
+      "duracao_min": 15,
+      "tipo": "caso",
+      "imagem": "https://images.unsplash.com/photo-1551887373-6bbfc7e134a3?auto=format&fit=crop&w=1400&q=80",
+      "bullets": [
+        "Situação: 24 semanas, caderneta incompleta e ansiedade sobre riscos.",
+        "Pergunta: como priorizar vacinas indicadas e evitar as contraindicadas?",
+        "Resposta esperada: seguir recomendações específicas para gestação e adiar vacinas vivas.",
+        "Ponto didático: aconselhamento empático e foco em proteção materno-fetal."
+      ]
+    },
+    {
+      "id": "s12",
+      "titulo": "Fechamento",
+      "subtitulo": "Resumo + avaliação rápida",
+      "duracao_min": 5,
+      "tipo": "encerramento",
+      "imagem": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1400&q=80",
+      "bullets": [
+        "Checklist final: contraindicação verdadeira, adiamento correto, EAPV notificado.",
+        "Aplicação imediata: revisar próximo plantão com protocolo de decisão rápida.",
+        "Avaliação formativa: 3 perguntas clínicas curtas + discussão em grupo."
+      ]
+    }
+  ]
+}

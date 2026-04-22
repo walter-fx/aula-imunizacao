@@ -11314,3 +11314,293 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+/* ===== Custom lesson experience ===== */
+:root {
+  --lesson-primary: #0ea5a3;
+  --lesson-primary-dark: #0a6f6e;
+  --lesson-secondary: #114e6a;
+  --lesson-highlight: #ffb703;
+  --lesson-text: #163047;
+  --lesson-surface: #f8fbff;
+}
+
+body {
+  color: var(--lesson-text);
+  background: radial-gradient(circle at 15% 10%, rgba(14, 165, 163, 0.08), transparent 35%),
+    radial-gradient(circle at 85% 0%, rgba(255, 183, 3, 0.08), transparent 32%),
+    #ffffff;
+}
+
+#mainNav {
+  background: rgba(17, 78, 106, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+#mainNav.navbar-shrink {
+  background: rgba(10, 111, 110, 0.94) !important;
+}
+
+#mainNav .navbar-brand {
+  color: #fff;
+  letter-spacing: 0.08rem;
+}
+
+header.masthead {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, rgba(17, 78, 106, 0.85), rgba(14, 165, 163, 0.78)), url("../assets/img/header-bg.jpg");
+}
+
+.masthead-backdrop {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(255, 183, 3, 0.28), transparent 35%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.18), transparent 30%);
+  animation: pulseBackdrop 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.hero-description {
+  margin: 0 auto 2rem;
+  max-width: 54rem;
+  font-size: 1.1rem;
+  color: #f2f7ff;
+}
+
+.btn-primary {
+  background-color: var(--lesson-highlight);
+  border-color: var(--lesson-highlight);
+  color: #263238;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 26px rgba(0, 0, 0, 0.2);
+}
+
+.content-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(17, 78, 106, 0.12);
+  box-shadow: 0 14px 34px rgba(17, 78, 106, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(17, 78, 106, 0.16);
+}
+
+.card-title {
+  color: var(--lesson-secondary);
+  margin-bottom: 1rem;
+}
+
+.emphasis-card {
+  border-left: 6px solid var(--lesson-primary);
+}
+
+.meta-card {
+  background: linear-gradient(165deg, #114e6a 0%, #0a6f6e 100%);
+  color: #ebfcfb;
+}
+
+.meta-card .card-title {
+  color: #fff;
+}
+
+.meta-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.meta-list li {
+  margin-bottom: 0.9rem;
+  line-height: 1.45;
+}
+
+.meta-list span {
+  color: #9af6eb;
+  font-weight: 700;
+}
+
+.content-list {
+  padding-left: 1.2rem;
+}
+
+.content-list li {
+  margin-bottom: 0.75rem;
+}
+
+.tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag-pill {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(14, 165, 163, 0.12);
+  border: 1px solid rgba(14, 165, 163, 0.3);
+  color: #0b5252;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.timeline-units {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.unit-card {
+  position: relative;
+  background: #fff;
+  border-radius: 1.2rem;
+  padding: 1.6rem;
+  border: 1px solid rgba(14, 165, 163, 0.2);
+  box-shadow: 0 14px 34px rgba(17, 78, 106, 0.08);
+}
+
+.unit-card-alt {
+  border-color: rgba(255, 183, 3, 0.36);
+}
+
+.unit-badge {
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  background: rgba(17, 78, 106, 0.12);
+  color: #114e6a;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.unit-group {
+  margin-top: 1.2rem;
+}
+
+.unit-group h5 {
+  color: #0a6f6e;
+  margin-bottom: 0.65rem;
+}
+
+.subtopic-block {
+  background: var(--lesson-surface);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(17, 78, 106, 0.12);
+  padding: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.unit-summary {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 183, 3, 0.12);
+  border-left: 4px solid var(--lesson-highlight);
+}
+
+.summary-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+}
+
+.case-card {
+  border-left: 5px solid var(--lesson-primary);
+}
+
+.case-id {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #0a6f6e;
+  text-transform: uppercase;
+}
+
+.glossary-item,
+.reference-item {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed rgba(17, 78, 106, 0.2);
+}
+
+.glossary-item:last-child,
+.reference-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.accent-strip {
+  border-top: 5px solid var(--lesson-highlight);
+}
+
+.footer {
+  background: #0f2a3c;
+  color: #f4fbff;
+}
+
+.footer .btn-social {
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.12s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.22s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.32s;
+}
+
+@keyframes pulseBackdrop {
+  0% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+  100% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .page-section h2.section-heading,
+  .page-section .section-heading.h2 {
+    font-size: 2rem;
+  }
+
+  header.masthead .masthead-heading {
+    font-size: 2.6rem;
+    line-height: 1.15;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}
