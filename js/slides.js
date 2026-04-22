@@ -285,9 +285,32 @@ function bindMediaFullscreen() {
         let clickTimer = null;
         const originalParent = preview.parentElement;
         const originalNext = preview.nextSibling;
+        const moveToOrigin = () => {
+            if (!originalParent) {
+                return;
+            }
+            if (originalNext && originalNext.parentNode === originalParent) {
+                originalParent.insertBefore(preview, originalNext);
+            } else {
+                originalParent.appendChild(preview);
+            }
+        };
+        const moveToBody = () => {
+            if (preview.parentElement !== document.body) {
+                document.body.appendChild(preview);
+            }
+        };
         const isMinimized = () => preview.classList.contains("media-minimized");
         const setMinimized = (value) => {
             preview.classList.toggle("media-minimized", value);
+            if (expanded) {
+                return;
+            }
+            if (value) {
+                moveToBody();
+                return;
+            }
+            moveToOrigin();
         };
 
         const clearDrag = () => {
@@ -307,13 +330,7 @@ function bindMediaFullscreen() {
             clearDrag();
             preview.classList.remove("media-expanded");
             document.body.classList.remove("media-focus-mode");
-            if (originalParent) {
-                if (originalNext && originalNext.parentNode === originalParent) {
-                    originalParent.insertBefore(preview, originalNext);
-                } else {
-                    originalParent.appendChild(preview);
-                }
-            }
+            moveToOrigin();
         };
 
         const open = () => {
