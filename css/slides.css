@@ -738,6 +738,11 @@ h3 {
 }
 
 @media (min-width: 1025px) {
+    .hero-site-preview {
+        border-radius: 0 0 1.1rem 1.1rem;
+        overflow: hidden;
+    }
+
     .hero-site-preview .media-window-body,
     .hero-site-preview .hero-qr-body,
     .hero-site-preview .media-main-image,
