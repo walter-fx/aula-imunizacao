@@ -1,0 +1,738 @@
+{
+"aula": {
+"titulo": "Contraindicações à Vacinação, Adiamento Vacinal, Falsas Contraindicações, Eventos Adversos Pós-Vacinação e Agentes Imunizantes",
+"tema_central": "Segurança em imunização e tomada de decisão clínica na sala de vacina",
+"disciplina": "Imunização / Saúde Coletiva",
+"idioma": "pt-BR",
+"nivel": "técnico e graduação na área da saúde",
+"objetivo_geral": "Compreender as principais contraindicações verdadeiras e falsas à vacinação, reconhecer situações que exigem adiamento do esquema vacinal, identificar o conceito e a classificação básica dos eventos adversos pós-vacinação e descrever a natureza e a composição dos agentes imunizantes utilizados nos programas de imunização.",
+"objetivos_especificos": [
+"Definir o que são contraindicações verdadeiras à vacinação, especialmente em relação aos imunobiológicos vivos atenuados.",
+"Identificar situações clínicas em que a vacinação deve ser adiada temporariamente.",
+"Diferenciar contraindicações reais de falsas contraindicações para evitar oportunidades perdidas de vacinação.",
+"Explicar o conceito de evento adverso pós-vacinação (EAPV) e sua relação temporal com a administração de vacinas.",
+"Reconhecer exemplos de eventos adversos esperados e inesperados após a vacinação.",
+"Descrever a natureza biológica das vacinas e seus principais componentes.",
+"Relacionar o conhecimento teórico às decisões práticas da sala de vacina.",
+"Fortalecer a conduta segura, ética e baseada em evidências no contexto da imunização."
+],
+"competencias_desenvolvidas": [
+"Análise crítica de condições clínicas antes da administração de vacinas.",
+"Tomada de decisão segura em situações de vacinação especial.",
+"Reconhecimento de eventos adversos e orientação adequada ao usuário.",
+"Interpretação de critérios técnicos do Programa Nacional de Imunizações.",
+"Educação em saúde com foco em segurança vacinal."
+],
+"habilidades": [
+"Avaliar se a vacina deve ser administrada, adiada ou contraindicada.",
+"Distinguir sinais clínicos que não impedem a vacinação.",
+"Orientar pacientes e familiares sobre reações esperadas após a vacina.",
+"Registrar e comunicar adequadamente eventos adversos pós-vacinação.",
+"Descrever a composição das vacinas e suas implicações clínicas."
+],
+"palavras_chave": [
+"vacinação",
+"imunização",
+"contraindicações",
+"falsas contraindicações",
+"adiamento vacinal",
+"EAPV",
+"eventos adversos pós-vacinação",
+"agentes imunizantes",
+"vacinas vivas atenuadas",
+"sala de vacina",
+"segurança vacinal",
+"Programa Nacional de Imunizações"
+],
+"justificativa": "O conhecimento sobre contraindicações à vacinação é essencial para garantir segurança ao usuário e, ao mesmo tempo, evitar atrasos desnecessários no calendário vacinal. Muitos indivíduos deixam de ser vacinados por medo, informação incorreta ou interpretação inadequada de sinais clínicos que não contraindicam o uso dos imunobiológicos. Por isso, compreender as verdadeiras contraindicações, os critérios de adiamento, as falsas contraindicações, os eventos adversos pós-vacinação e a composição dos agentes imunizantes é indispensável para a prática segura dos profissionais de saúde.",
+"carga_horaria_sugerida": "2 a 4 horas",
+"publico_alvo": [
+"Estudantes de enfermagem",
+"Técnicos de enfermagem",
+"Profissionais da atenção primária",
+"Profissionais da sala de vacina",
+"Acadêmicos da área da saúde"
+]
+},
+"conteudo_programatico": {
+"unidades": [
+{
+"titulo": "1. Introdução à segurança vacinal",
+"objetivo": "Apresentar a importância da triagem vacinal adequada e da avaliação clínica antes da administração do imunobiológico.",
+"topicos": [
+"Vacinação como estratégia de saúde pública",
+"Importância da anamnese pré-vacinal",
+"Redução de riscos e prevenção de oportunidades perdidas de vacinação",
+"Papel do profissional de saúde na orientação segura do usuário"
+],
+"texto_base": "A vacinação é uma das medidas mais eficazes de prevenção de doenças imunopreveníveis. Entretanto, para que a prática seja segura e efetiva, é necessário avaliar criteriosamente as condições clínicas do usuário antes da administração de qualquer imunobiológico. Essa avaliação inclui a identificação de contraindicações verdadeiras, situações que indiquem adiamento temporário e circunstâncias que, embora frequentemente interpretadas como impeditivas, não contraindicam a vacinação. A triagem adequada protege o paciente e contribui para maior adesão e cobertura vacinal."
+},
+{
+"titulo": "2. Contraindicações verdadeiras à vacinação",
+"objetivo": "Identificar as principais situações em que vacinas vivas atenuadas ou bactérias atenuadas não devem ser administradas.",
+"topicos": [
+"Imunodeficiências congênitas e adquiridas",
+"Neoplasias malignas",
+"Gravidez e exceções por risco epidemiológico",
+"Uso de terapias imunossupressoras"
+],
+"texto_base": "As vacinas de vírus vivos atenuados ou bactérias atenuadas não devem ser administradas em determinadas situações clínicas, pois nesses contextos o organismo pode não responder adequadamente ao imunobiológico ou pode haver aumento do risco de complicações. Entre as contraindicações clássicas estão as imunodeficiências adquiridas ou congênitas, as neoplasias malignas, a gestação em regra geral e o uso de doses elevadas de corticoesteroides ou outras terapias imunossupressoras, como quimioterapia e radioterapia.",
+"subtopicos": [
+{
+"titulo": "2.1 Imunodeficiência adquirida ou congênita",
+"descricao": "Pessoas com imunodeficiência podem apresentar resposta inadequada e maior risco ao receber vacinas vivas atenuadas.",
+"pontos_chave": [
+"Inclui imunodeficiências congênitas e adquiridas.",
+"O texto da aula destaca HIV como exemplo de imunodeficiência adquirida.",
+"A avaliação deve considerar o grau de imunossupressão e as recomendações específicas do programa de imunização."
+]
+},
+{
+"titulo": "2.2 Pacientes com neoplasias malignas",
+"descricao": "Pacientes com câncer, especialmente quando em tratamento ou com comprometimento imunológico, podem ter contraindicação ao uso de vacinas vivas atenuadas.",
+"pontos_chave": [
+"O risco está relacionado ao comprometimento do sistema imune.",
+"A indicação vacinal nesses casos deve ser individualizada e baseada em protocolos específicos."
+]
+},
+{
+"titulo": "2.3 Gravidez",
+"descricao": "Vacinas vivas atenuadas não devem ser administradas rotineiramente durante a gravidez.",
+"pontos_chave": [
+"A regra geral é evitar vacinas vivas atenuadas durante a gestação.",
+"O texto apresentado destaca exceção em situação de alto risco de exposição, como febre amarela, quando risco e benefício devem ser avaliados.",
+"A decisão deve considerar o cenário epidemiológico."
+]
+},
+{
+"titulo": "2.4 Terapias imunossupressoras",
+"descricao": "Tratamentos que reduzem a resposta imunológica podem contraindicar temporariamente ou de forma transitória determinadas vacinas.",
+"pontos_chave": [
+"Altas doses de corticoesteroides podem contraindicar vacinas vivas atenuadas.",
+"Quimioterapia e radioterapia são exemplos de terapias imunossupressoras citadas.",
+"A vacinação deve ser programada conforme o término do tratamento e a recuperação imunológica."
+]
+}
+],
+"resumo": "As contraindicações verdadeiras à vacinação concentram-se, sobretudo, no uso de vacinas vivas atenuadas em indivíduos com maior vulnerabilidade imunológica ou em condições especiais, como gestação e terapias imunossupressoras."
+},
+{
+"titulo": "3. Situações de adiamento da vacinação",
+"objetivo": "Compreender quando a vacinação deve ser apenas postergada, e não permanentemente contraindicada.",
+"topicos": [
+"Pós-imunossupressão",
+"Pós-transfusão ou hemoderivados",
+"Doença aguda febril grave"
+],
+"texto_base": "Algumas situações não impedem a vacinação de modo definitivo, mas exigem adiamento temporário para que a resposta imune seja adequada e para que não haja confusão diagnóstica com manifestações clínicas intercorrentes. Nessas circunstâncias, o profissional deve reorganizar o esquema vacinal e orientar claramente o usuário sobre o momento oportuno para retomada.",
+"subtopicos": [
+{
+"titulo": "3.1 Após tratamento com imunossupressores ou altas doses de corticoesteroides",
+"descricao": "Após o fim do tratamento, deve-se aguardar um período para reiniciar a vacinação.",
+"pontos_chave": [
+"O texto base orienta adiamento até três meses após o tratamento.",
+"O objetivo é permitir recuperação da resposta imunológica.",
+"A conduta protege a eficácia e a segurança da vacinação."
+]
+},
+{
+"titulo": "3.2 Após transfusões sanguíneas ou uso de hemoderivados",
+"descricao": "Anticorpos presentes nesses produtos podem interferir na resposta vacinal.",
+"pontos_chave": [
+"Os anticorpos podem neutralizar o efeito vacinal.",
+"O texto orienta aguardar de 6 a 8 semanas para reiniciar o esquema de vacinação.",
+"Essa conduta é especialmente relevante em vacinas cuja resposta depende de adequada replicação ou reconhecimento antigênico."
+]
+},
+{
+"titulo": "3.3 Doença aguda febril grave",
+"descricao": "A vacinação deve ser adiada temporariamente para evitar confusão entre sintomas da doença de base e possíveis reações pós-vacinais.",
+"pontos_chave": [
+"O adiamento é indicado em doença aguda febril grave.",
+"A prioridade é diferenciar evolução clínica da doença e possíveis EAPV.",
+"Após melhora do quadro, a vacinação deve ser retomada."
+]
+}
+],
+"resumo": "Adiar não significa abandonar o esquema vacinal. Significa escolher o momento mais seguro e eficaz para administrar a vacina."
+},
+{
+"titulo": "4. Falsas contraindicações à vacinação",
+"objetivo": "Reconhecer situações que frequentemente geram medo ou recusa, mas que não impedem a vacinação.",
+"topicos": [
+"Sintomas leves",
+"Doenças pregressas imunopreveníveis",
+"Desnutrição",
+"Uso de antimicrobianos",
+"Doença neurológica estável",
+"Alergias não relacionadas a componentes da vacina",
+"Uso de corticoide em baixa dose",
+"Prematuridade e baixo peso",
+"Internação hospitalar"
+],
+"texto_base": "As falsas contraindicações representam um dos principais fatores de atraso vacinal. Muitas pessoas deixam de ser vacinadas por informações equivocadas ou por excesso de cautela sem base técnica. Reconhecer essas situações é essencial para evitar oportunidades perdidas e ampliar a cobertura vacinal.",
+"lista_detalhada": [
+{
+"situacao": "Tosse, coriza, diarreia leve ou moderada e doenças de pele",
+"explicacao": "Quadros leves, sem repercussão sistêmica importante, em geral não impedem a vacinação. O profissional deve avaliar o estado geral do paciente, mas esses sinais, isoladamente, configuram falsa contraindicação."
+},
+{
+"situacao": "História ou diagnóstico clínico pregresso de hepatite B, tuberculose, tétano, difteria, coqueluche, sarampo, caxumba, rubéola, poliomielite e febre amarela",
+"explicacao": "O antecedente clínico dessas doenças não deve, por si só, ser interpretado automaticamente como impedimento à vacinação correspondente, conforme o conteúdo apresentado."
+},
+{
+"situacao": "Desnutrição",
+"explicacao": "A desnutrição não deve ser usada como motivo para adiar ou negar vacinação, pois justamente esses indivíduos podem estar mais vulneráveis a agravos infecciosos."
+},
+{
+"situacao": "Uso de qualquer antimicrobiano",
+"explicacao": "O uso de antibióticos não contraindica a maioria das vacinas. É necessário avaliar apenas situações clínicas específicas, mas de forma geral isso é considerado falsa contraindicação."
+},
+{
+"situacao": "Vacinação contra a raiva",
+"explicacao": "Ter recebido ou estar em contexto de vacinação antirrábica não constitui, por si só, contraindicação geral às demais vacinas, conforme o texto-base."
+},
+{
+"situacao": "Doença neurológica pregressa ou estável",
+"explicacao": "Condição neurológica antiga ou estável não deve ser interpretada automaticamente como impeditivo vacinal."
+},
+{
+"situacao": "Alergias, exceto as relacionadas aos componentes vacinais",
+"explicacao": "Nem toda alergia contraindica vacinação. O cuidado principal recai sobre hipersensibilidade a componentes específicos do imunobiológico."
+},
+{
+"situacao": "Tratamentos curtos com corticoesteroides, manutenção fisiológica ou doses baixas a moderadas",
+"explicacao": "Nesses casos, o texto destaca que não se trata de contraindicação verdadeira. O risco maior se relaciona a altas doses e terapias imunossupressoras relevantes."
+},
+{
+"situacao": "Baixo peso ao nascimento ou prematuridade",
+"explicacao": "Essas condições, de modo geral, não contraindicam vacinação. O texto ressalta exceção para a BCG, que requer avaliação específica conforme protocolos."
+},
+{
+"situacao": "Internação hospitalar",
+"explicacao": "A hospitalização não deve impedir a atualização vacinal quando o quadro clínico permitir e houver indicação."
+}
+],
+"mensagem_educativa": "Falsas contraindicações devem ser combatidas com educação em saúde, protocolo técnico e escuta qualificada. O medo sem base científica pode atrasar esquemas vacinais e aumentar a vulnerabilidade da população.",
+"resumo": "Nem todo sintoma ou condição clínica leve impede vacinação. Conhecer as falsas contraindicações evita perda de oportunidade e melhora a cobertura vacinal."
+},
+{
+"titulo": "5. Evento Adverso Pós-Vacinação (EAPV)",
+"objetivo": "Definir EAPV e compreender sua natureza, frequência e importância para a vigilância em saúde.",
+"topicos": [
+"Definição de EAPV",
+"Relação temporal versus causal",
+"Eventos esperados e inesperados",
+"Eventos leves e graves",
+"Importância da vigilância"
+],
+"texto_base": "Segundo o Ministério da Saúde, evento adverso pós-vacinação é qualquer ocorrência médica indesejada após a vacinação e que não necessariamente possui relação causal com o uso da vacina ou de outro imunobiológico. Portanto, o simples fato de um evento ocorrer após a vacinação não significa automaticamente que ele foi causado pela vacina. Essa distinção é fundamental para evitar conclusões precipitadas e para garantir adequada investigação.",
+"conceitos_fundamentais": [
+{
+"conceito": "Relação temporal",
+"explicacao": "O evento ocorre depois da vacinação, mas isso, por si só, não comprova causa e efeito."
+},
+{
+"conceito": "Relação causal",
+"explicacao": "Exige avaliação técnica, investigação, análise clínica e epidemiológica para determinar se a vacina teve relação direta com o evento."
+},
+{
+"conceito": "Evento indesejável",
+"explicacao": "Pode corresponder a sintoma, doença, sinal clínico ou achado laboratorial anormal."
+}
+],
+"classificacao_geral": {
+"esperados": {
+"descricao": "São eventos já conhecidos pela experiência acumulada e pela natureza do imunobiológico.",
+"exemplos": [
+"febre",
+"dor local",
+"edema local",
+"mal-estar",
+"reação inflamatória local"
+]
+},
+"inesperados": {
+"descricao": "São eventos não usualmente associados à vacina ou que se apresentam com intensidade, frequência ou forma incomum.",
+"exemplos": [
+"manifestações clínicas não descritas previamente",
+"eventos com gravidade ou padrão atípico",
+"necessidade de investigação aprofundada"
+]
+}
+},
+"exemplos_mencionados_no_texto": [
+{
+"tipo": "Relativamente trivial",
+"eventos": [
+"febre",
+"dor",
+"edema local"
+]
+},
+{
+"tipo": "Mais graves",
+"eventos": [
+"convulsões febris",
+"episódio hipotônico-hiporresponsivo",
+"anafilaxia"
+]
+}
+],
+"importancia_da_vigilancia": [
+"Permite identificar padrões de segurança dos imunobiológicos.",
+"Favorece investigação oportuna de casos suspeitos.",
+"Protege a confiança pública nos programas de imunização.",
+"Contribui para atualização de protocolos e recomendações."
+],
+"mensagem_chave": "Todo evento após vacinação merece atenção clínica e registro adequado, mas nem todo evento após vacinação é causado pela vacina.",
+"resumo": "O EAPV é qualquer ocorrência médica indesejada após a vacinação. A relação temporal não equivale automaticamente à causalidade. A vigilância é essencial para distinguir reações esperadas, coincidentes e eventos realmente relacionados ao imunobiológico."
+},
+{
+"titulo": "6. Agentes imunizantes",
+"objetivo": "Explicar o que são agentes imunizantes, sua natureza biológica e os principais componentes do produto vacinal.",
+"topicos": [
+"Natureza das vacinas",
+"Vacinas monovalentes e combinadas",
+"Microrganismos vivos atenuados",
+"Microrganismos inativados",
+"Componentes purificados ou modificados",
+"Elementos adicionais da formulação"
+],
+"texto_base": "A vacina é um produto farmacêutico que contém um ou mais agentes imunizantes, podendo ser monovalente ou combinada. Esses agentes podem estar presentes em diferentes formas biológicas, como bactérias ou vírus vivos atenuados, vírus inativados, bactérias mortas, além de componentes purificados e ou modificados dos agentes causadores das doenças contra as quais a vacina é dirigida.",
+"natureza_dos_agentes_imunizantes": [
+{
+"tipo": "Vírus vivos atenuados",
+"descricao": "Contêm microrganismos vivos com virulência reduzida, capazes de induzir resposta imune robusta em indivíduos imunocompetentes."
+},
+{
+"tipo": "Bactérias atenuadas",
+"descricao": "Formas bacterianas modificadas para perda de virulência significativa, mantendo capacidade imunogênica."
+},
+{
+"tipo": "Vírus inativados",
+"descricao": "Contêm vírus mortos ou inativados, incapazes de causar a doença, mas aptos a estimular o sistema imune."
+},
+{
+"tipo": "Bactérias mortas",
+"descricao": "Utilizam microrganismos não viáveis para desencadear resposta imunológica."
+},
+{
+"tipo": "Componentes purificados ou modificados",
+"descricao": "Utilizam frações antigênicas, proteínas ou estruturas específicas do agente etiológico."
+}
+],
+"classificacao_por_composicao": [
+{
+"categoria": "Monovalente",
+"descricao": "Contém antígeno direcionado a uma única doença ou agente."
+},
+{
+"categoria": "Combinada",
+"descricao": "Contém mais de um agente ou antígeno, permitindo proteção contra múltiplas doenças em uma mesma formulação."
+}
+],
+"composicao_do_produto_final": {
+"descricao_geral": "Além do agente imunizante, o produto final pode conter proteínas ou outros componentes oriundos dos meios de cultura, cultura de células e substâncias complementares utilizadas no processo de fabricação.",
+"componentes": [
+{
+"nome": "Agente imunizante",
+"funcao": "Elemento principal responsável por induzir resposta imune específica."
+},
+{
+"nome": "Proteínas residuais ou componentes do meio de cultura",
+"funcao": "Podem permanecer em pequenas quantidades em decorrência do processo produtivo."
+},
+{
+"nome": "Líquido de suspensão",
+"funcao": "Veículo no qual o imunobiológico é mantido; geralmente água destilada ou solução salina fisiológica."
+},
+{
+"nome": "Conservantes",
+"funcao": "Ajudam a evitar crescimento de contaminantes, especialmente em frascos multidoses."
+},
+{
+"nome": "Antibióticos",
+"funcao": "Podem estar presentes em pequenas quantidades para impedir contaminação bacteriana durante a produção."
+}
+]
+},
+"detalhamento_componentes": [
+{
+"titulo": "6.1 Líquido de suspensão",
+"descricao": "É constituído, em geral, por água destilada ou solução salina fisiológica, funcionando como meio para manutenção e aplicação do produto."
+},
+{
+"titulo": "6.2 Conservantes",
+"descricao": "São substâncias adicionadas para reduzir risco de contaminação do produto, especialmente em frascos de múltiplas doses.",
+"exemplos_mencionados": [
+"timerosal"
+]
+},
+{
+"titulo": "6.3 Antibióticos",
+"descricao": "Podem ser incluídos em pequenas quantidades para impedir crescimento de contaminantes bacterianos.",
+"exemplos_mencionados": [
+"neomicina"
+]
+}
+],
+"observacao_importante": "A composição vacinal ajuda a explicar tanto a eficácia imunológica quanto alguns eventos alérgicos relacionados a componentes específicos do produto. Por isso, alergias relevantes devem ser sempre investigadas em relação à composição da vacina e não apenas ao histórico geral de alergia do indivíduo.",
+"resumo": "As vacinas são produtos farmacêuticos complexos, compostos por agentes imunizantes e substâncias auxiliares necessárias à estabilidade, conservação e segurança do produto."
+},
+{
+"titulo": "7. Aplicação prática na sala de vacina",
+"objetivo": "Traduzir o conteúdo teórico em condutas operacionais seguras.",
+"topicos": [
+"Triagem clínica",
+"Tomada de decisão",
+"Registro",
+"Orientação ao usuário",
+"Encaminhamento em casos especiais"
+],
+"texto_base": "Na prática da sala de vacina, a decisão de vacinar, adiar ou contraindicar exige escuta qualificada, avaliação clínica e conhecimento técnico atualizado. O profissional deve evitar tanto a negligência quanto o excesso de contraindicações sem respaldo científico.",
+"condutas_recomendadas": [
+"Realizar anamnese pré-vacinal objetiva e direcionada.",
+"Identificar uso atual ou recente de imunossupressores.",
+"Verificar presença de febre grave ou doença aguda importante.",
+"Investigar alergias relacionadas a componentes do imunobiológico.",
+"Distinguir sintomas leves de situações que realmente exigem adiamento.",
+"Orientar sobre eventos adversos esperados, como dor local e febre.",
+"Registrar adequadamente as doses administradas e intercorrências.",
+"Encaminhar para avaliação especializada quando houver situação especial ou dúvida clínica relevante."
+],
+"erros_frequentes_a_evitar": [
+"Negar vacinação por coriza leve ou diarreia moderada sem avaliação global.",
+"Considerar toda alergia como contraindicação absoluta.",
+"Atribuir automaticamente à vacina qualquer sintoma ocorrido após a aplicação.",
+"Não retomar o esquema após período de adiamento.",
+"Desconhecer exceções e protocolos específicos de grupos especiais."
+],
+"mensagem_profissional": "Vacinar com segurança exige conhecimento técnico, escuta, julgamento clínico e compromisso com a proteção individual e coletiva."
+},
+{
+"titulo": "8. Síntese integradora",
+"objetivo": "Consolidar os conceitos estudados na aula.",
+"texto_base": "As contraindicações verdadeiras à vacinação são relativamente restritas e se aplicam, especialmente, a vacinas vivas atenuadas em indivíduos com imunodepressão, câncer, gestação em determinadas circunstâncias e uso de terapias imunossupressoras. Algumas situações exigem apenas adiamento, como pós-uso de imunossupressores, pós-transfusão e doença febril aguda grave. Em contrapartida, muitos quadros clínicos comuns constituem falsas contraindicações e não devem atrasar a imunização. O EAPV representa qualquer ocorrência médica indesejada após a vacinação, sem que isso signifique necessariamente causalidade. Por fim, entender a natureza e a composição dos agentes imunizantes fortalece a prática segura e fundamentada da vacinação.",
+"mapa_conceitual_textual": {
+"contraindicacao_verdadeira": "situação em que a vacina não deve ser administrada naquele contexto",
+"adiamento": "situação temporária em que a vacina pode ser realizada posteriormente",
+"falsa_contraindicacao": "condição que não deve impedir vacinação",
+"EAPV": "ocorrência médica após vacina sem causalidade obrigatória",
+"agente_imunizante": "componente biológico da vacina que induz resposta imune"
+}
+}
+]
+},
+"quadro_resumo": {
+"contraindicacoes_verdadeiras_para_vacinas_vivas_atenuadas": [
+"Imunodeficiência adquirida ou congênita",
+"Neoplasias malignas",
+"Gravidez, salvo avaliação específica de risco-benefício em alto risco de exposição, como febre amarela",
+"Uso de altas doses de corticoesteroides",
+"Quimioterapia, radioterapia e outras terapias imunossupressoras"
+],
+"situacoes_de_adiamento": [
+"Até três meses após tratamento com imunossupressores ou altas doses de corticoesteroides",
+"De 6 a 8 semanas após transfusão sanguínea ou uso de hemoderivados",
+"Durante doença aguda febril grave"
+],
+"falsas_contraindicacoes": [
+"Tosse",
+"Coriza",
+"Diarreia leve ou moderada",
+"Doenças de pele",
+"História pregressa de algumas doenças imunopreveníveis citadas no conteúdo",
+"Desnutrição",
+"Uso de antimicrobianos",
+"Vacinação contra a raiva",
+"Doença neurológica pregressa ou estável",
+"Alergias não relacionadas aos componentes vacinais",
+"Tratamentos curtos com corticoesteroides em doses baixas ou moderadas",
+"Baixo peso ao nascer, com exceção de avaliação específica para BCG",
+"Prematuridade",
+"Internação hospitalar"
+],
+"eventos_adversos_esperados": [
+"Febre",
+"Dor local",
+"Edema local"
+],
+"eventos_adversos_mais_graves_mencionados": [
+"Convulsões febris",
+"Episódio hipotônico-hiporresponsivo",
+"Anafilaxia"
+],
+"componentes_das_vacinas": [
+"Agente imunizante",
+"Proteínas residuais e componentes de meios de cultura",
+"Líquido de suspensão",
+"Conservantes",
+"Antibióticos"
+]
+},
+"roteiro_de_aula": {
+"abertura": {
+"duracao_sugerida": "10 minutos",
+"estrategia": "Iniciar perguntando aos alunos se resfriado, uso de antibiótico ou alergia impedem vacinação. Utilizar as respostas para introduzir o conceito de falsas contraindicações.",
+"fala_sugerida_docente": "Muitas pessoas deixam de se vacinar por orientação incorreta ou por medo. Hoje vamos diferenciar o que realmente contraindica uma vacina, o que apenas exige adiamento e o que não deve impedir a imunização."
+},
+"desenvolvimento": {
+"duracao_sugerida": "60 a 90 minutos",
+"etapas": [
+"Apresentar contraindicações verdadeiras com foco em vacinas vivas atenuadas.",
+"Explicar situações de adiamento e os prazos descritos.",
+"Discutir falsas contraindicações e suas implicações na cobertura vacinal.",
+"Definir EAPV e diferenciar relação temporal de causalidade.",
+"Descrever a composição e a natureza dos agentes imunizantes."
+]
+},
+"encerramento": {
+"duracao_sugerida": "10 a 15 minutos",
+"estrategia": "Revisão oral em formato de perguntas rápidas, seguida de síntese integradora.",
+"fala_sugerida_docente": "O profissional de saúde precisa vacinar com segurança, mas também sem criar barreiras desnecessárias. Conhecimento técnico evita tanto o risco clínico quanto a perda de oportunidade vacinal."
+}
+},
+"metodologia": {
+"abordagem": "expositivo-dialogada",
+"estrategias": [
+"Aula dialogada com construção de exemplos clínicos",
+"Leitura orientada de situações-problema",
+"Uso de quadro comparativo entre contraindicação, adiamento e falsa contraindicação",
+"Discussão de casos de EAPV",
+"Fixação por perguntas objetivas e estudo de caso"
+],
+"recursos_didaticos": [
+"Slides",
+"Quadro branco",
+"Marcadores",
+"Projetor",
+"Tabelas comparativas",
+"Casos clínicos impressos",
+"Manual do PNI e materiais do Ministério da Saúde"
+]
+},
+"estudo_de_casos": [
+{
+"id": 1,
+"titulo": "Resfriado leve no dia da vacina",
+"caso": "Criança com coriza, tosse leve e sem febre comparece à unidade para atualização vacinal.",
+"pergunta": "A vacinação deve ser adiada?",
+"resposta_esperada": "Não necessariamente. Trata-se, em geral, de falsa contraindicação, desde que o estado geral esteja preservado.",
+"justificativa": "Tosse e coriza leves não contraindicam vacinação."
+},
+{
+"id": 2,
+"titulo": "Pós-quimioterapia",
+"caso": "Paciente oncológico concluiu quimioterapia recentemente e procura a unidade para receber vacina de vírus vivo atenuado.",
+"pergunta": "A vacina deve ser administrada imediatamente?",
+"resposta_esperada": "Não. É necessário avaliar o período após tratamento imunossupressor e considerar adiamento conforme protocolo.",
+"justificativa": "Terapias imunossupressoras constituem contraindicação temporária ou indicam adiamento para vacinas vivas atenuadas."
+},
+{
+"id": 3,
+"titulo": "Gestante com risco epidemiológico",
+"caso": "Gestante reside em área com alto risco de exposição à febre amarela.",
+"pergunta": "Toda vacina viva está absolutamente proibida?",
+"resposta_esperada": "Não. Em situações especiais de alto risco de exposição, a decisão pode envolver avaliação de risco-benefício.",
+"justificativa": "O conteúdo destaca exceção possível para febre amarela em alto risco de exposição."
+},
+{
+"id": 4,
+"titulo": "Uso de antibiótico",
+"caso": "Adulto em uso de antimicrobiano por infecção leve deseja se vacinar.",
+"pergunta": "O antibiótico impede a vacinação?",
+"resposta_esperada": "Não, em regra. O uso de antimicrobiano é falsa contraindicação.",
+"justificativa": "O texto apresentado inclui uso de qualquer antimicrobiano entre as falsas contraindicações."
+},
+{
+"id": 5,
+"titulo": "Evento após vacinação",
+"caso": "Após receber uma vacina, um paciente apresenta febre e dor no local da aplicação.",
+"pergunta": "Isso pode ser considerado EAPV?",
+"resposta_esperada": "Sim. Trata-se de evento adverso pós-vacinação esperado e geralmente leve.",
+"justificativa": "Febre e dor local são exemplos de eventos esperados descritos no conteúdo."
+}
+],
+"perguntas_para_discussao": [
+"Por que é perigoso considerar toda intercorrência clínica como contraindicação à vacinação?",
+"Qual a diferença entre adiar uma vacina e contraindicá-la?",
+"Por que nem todo evento que ocorre após a vacinação pode ser considerado causado pela vacina?",
+"Como as falsas contraindicações afetam a cobertura vacinal?",
+"Por que conhecer a composição da vacina é importante na avaliação de alergias?"
+],
+"atividade_avaliativa": {
+"tipo": "mista",
+"componentes": [
+{
+"tipo": "questoes_objetivas",
+"quantidade": 10,
+"foco": "Diferenciar contraindicação, adiamento e falsa contraindicação"
+},
+{
+"tipo": "estudo_de_caso",
+"quantidade": 2,
+"foco": "Aplicação prática do raciocínio clínico na sala de vacina"
+},
+{
+"tipo": "questao_discursiva",
+"quantidade": 1,
+"foco": "Explicar EAPV e sua importância para a vigilância em saúde"
+}
+],
+"criterios_de_correcao": [
+"Coerência técnica",
+"Uso correto dos conceitos",
+"Capacidade de justificar a conduta",
+"Clareza e objetividade",
+"Aplicação do conteúdo à prática profissional"
+]
+},
+"questoes_sugeridas": [
+{
+"id": 1,
+"tipo": "objetiva",
+"enunciado": "Assinale a alternativa que representa uma contraindicação verdadeira para vacinas vivas atenuadas:",
+"alternativas": [
+"Coriza leve",
+"Uso de antimicrobianos",
+"Imunodeficiência adquirida ou congênita",
+"Internação hospitalar"
+],
+"gabarito": "Imunodeficiência adquirida ou congênita",
+"comentario": "Vacinas vivas atenuadas não devem ser administradas em indivíduos com comprometimento importante da imunidade."
+},
+{
+"id": 2,
+"tipo": "objetiva",
+"enunciado": "Após transfusão sanguínea ou uso de hemoderivados, o esquema vacinal deve ser reiniciado, conforme o conteúdo estudado, após:",
+"alternativas": [
+"24 horas",
+"7 dias",
+"6 a 8 semanas",
+"6 meses"
+],
+"gabarito": "6 a 8 semanas",
+"comentario": "O texto-base informa que os anticorpos recebidos podem neutralizar o efeito vacinal, exigindo espera de 6 a 8 semanas."
+},
+{
+"id": 3,
+"tipo": "objetiva",
+"enunciado": "Constitui falsa contraindicação à vacinação:",
+"alternativas": [
+"Neoplasia maligna em atividade",
+"Uso de quimioterapia",
+"Diarreia leve ou moderada",
+"Imunodeficiência congênita"
+],
+"gabarito": "Diarreia leve ou moderada",
+"comentario": "Sintomas leves, em geral, não impedem a vacinação."
+},
+{
+"id": 4,
+"tipo": "discursiva",
+"enunciado": "Explique com suas palavras o que é um evento adverso pós-vacinação e por que ele não significa necessariamente que a vacina causou o problema.",
+"gabarito_referencia": "EAPV é qualquer ocorrência médica indesejada após a vacinação. Entretanto, o fato de ocorrer após a aplicação não estabelece automaticamente relação causal. É necessária investigação técnica para determinar se o evento foi causado pela vacina, se foi coincidente ou se decorreu de outro fator."
+},
+{
+"id": 5,
+"tipo": "estudo_de_caso",
+"enunciado": "Recém-nascido prematuro e de baixo peso comparece para vacinação. O profissional fica inseguro e pensa em adiar todas as vacinas. Essa conduta está correta?",
+"gabarito_referencia": "Não. Prematuridade e baixo peso ao nascimento, de modo geral, não constituem contraindicações à vacinação, ressalvada avaliação específica para BCG conforme protocolos."
+}
+],
+"glossario": [
+{
+"termo": "Imunobiológico",
+"definicao": "Produto utilizado para induzir, modular ou conferir proteção imunológica, incluindo vacinas, imunoglobulinas e soros."
+},
+{
+"termo": "Vacina viva atenuada",
+"definicao": "Vacina produzida com microrganismos vivos enfraquecidos, capazes de estimular resposta imune sem causar a doença em indivíduos imunocompetentes."
+},
+{
+"termo": "Vacina inativada",
+"definicao": "Vacina elaborada com microrganismos mortos ou inativados, incapazes de se replicar."
+},
+{
+"termo": "Imunossupressão",
+"definicao": "Redução da capacidade de resposta do sistema imunológico, seja por doença, seja por tratamento."
+},
+{
+"termo": "EAPV",
+"definicao": "Evento adverso pós-vacinação; qualquer ocorrência médica indesejada após vacinação, sem relação causal obrigatória."
+},
+{
+"termo": "Falsa contraindicação",
+"definicao": "Situação frequentemente interpretada como impeditiva para vacinação, mas que não deve, em regra, impedir a administração do imunobiológico."
+},
+{
+"termo": "Hemoderivados",
+"definicao": "Produtos obtidos a partir do sangue humano, capazes de interferir na resposta a alguns imunobiológicos."
+}
+],
+"mensagens_chave": [
+"Contraindicação verdadeira não é a mesma coisa que adiamento temporário.",
+"Sintomas leves e condições clínicas estáveis frequentemente não contraindicam vacinação.",
+"Nem todo evento após vacinação foi causado pela vacina.",
+"O profissional da saúde deve unir segurança clínica e prevenção de oportunidades perdidas.",
+"Conhecer a composição da vacina ajuda a compreender eficácia, segurança e possíveis reações."
+],
+"referencias": [
+{
+"tipo": "documento_oficial",
+"autor_institucional": "Brasil. Ministério da Saúde",
+"titulo": "Manual - Normas e Procedimentos para Vacinação",
+"edicao_ou_versao": "2ª edição revisada",
+"ano": "2024",
+"instituicao": "Ministério da Saúde",
+"observacao": "Manual oficial com diretrizes técnicas e operacionais para a prática de imunização no Brasil.",
+"citacao_web": "([Serviços e Informações do Brasil][1])"
+},
+{
+"tipo": "documento_oficial",
+"autor_institucional": "Brasil. Ministério da Saúde",
+"titulo": "Manual de vigilância epidemiológica de eventos adversos pós-vacinação",
+"edicao_ou_versao": "4ª edição atualizada",
+"ano": "2021/2023",
+"instituicao": "Ministério da Saúde",
+"observacao": "Documento de referência para definição, classificação e vigilância dos EAPV no país.",
+"citacao_web": "([Serviços e Informações do Brasil][2])"
+},
+{
+"tipo": "documento_oficial",
+"autor_institucional": "Brasil. Ministério da Saúde. Secretaria de Vigilância em Saúde. Departamento de Imunizações e Doenças Transmissíveis",
+"titulo": "Manual de vigilância epidemiológica de eventos adversos pós-vacinação",
+"edicao_ou_versao": "4ª edição",
+"ano": "2020",
+"instituicao": "Ministério da Saúde",
+"observacao": "Edição eletrônica amplamente utilizada como base técnica para vigilância de segurança vacinal.",
+"citacao_web": "([Biblioteca Virtual em Saúde MS][3])"
+},
+{
+"tipo": "portal_oficial",
+"autor_institucional": "Ministério da Saúde",
+"titulo": "Manuais de vacinação e imunização",
+"ano": "2023",
+"instituicao": "Gov.br",
+"observacao": "Página oficial que reúne manuais atualizados da área de vacinação e imunização.",
+"citacao_web": "([Serviços e Informações do Brasil][4])"
+}
+],
+"observacoes_finais": {
+"nota_pedagogica": "O conteúdo desta aula deve ser sempre articulado com protocolos atualizados do Programa Nacional de Imunizações e com avaliação clínica individualizada, especialmente em grupos especiais.",
+"nota_tecnica": "Este material foi estruturado a partir do conteúdo fornecido pelo usuário e complementado com referências oficiais do Ministério da Saúde para organização didática e fundamentação técnica.",
+"uso_sugerido": [
+"apostila",
+"slide",
+"roteiro de aula",
+"material de revisão",
+"base para avaliação"
+]
+}
+}
+
+[1]: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/guias-e-manuais/2024/manual-de-normas-e-procedimentos-para-vacinacao.pdf/view?utm_source=chatgpt.com "Manual - Normas e Procedimentos para Vacinação"
+[2]: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/vacinacao-imunizacao-pni/manual_eventos-_adversos_pos_vacinacao_4ed_atualizada.pdf/view?utm_source=chatgpt.com "Manual de Vigilância Epidemiológica de Eventos Adversos ..."
+[3]: https://bvsms.saude.gov.br/bvs/publicacoes/manual_vigilancia_epidemiologica_eventos_vacinacao_4ed.pdf?utm_source=chatgpt.com "Manual de vigilância epideMiológica de eventos adversos ..."
+[4]: https://www.gov.br/saude/pt-br/vacinacao/manuais?utm_source=chatgpt.com "Manuais — Ministério da Saúde - Portal Gov.br"
