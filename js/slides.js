@@ -48,7 +48,20 @@ async function initDeck() {
             return;
         }
 
+        const hideMinimizedOnActive = isMobileDeck() && activePreview.classList.contains("hero-qr-preview");
+
         const minimizedPreviews = Array.from(document.querySelectorAll(".media-preview.media-minimized"));
+        if (hideMinimizedOnActive) {
+            minimizedPreviews.forEach((preview) => {
+                if (preview.__media?.setMinimized) {
+                    preview.__media.setMinimized(false);
+                    return;
+                }
+                preview.classList.remove("media-minimized");
+            });
+            return;
+        }
+
         if (!minimizedPreviews.length) {
             if (isMobileDeck() && activePreview.__media?.setMinimized) {
                 activePreview.__media.setMinimized(true);
@@ -516,7 +529,13 @@ function bindMediaFullscreen() {
     });
 
     if (isMobileDeck()) {
-        previews.forEach((preview) => preview.__media?.setMinimized(true));
+        previews.forEach((preview) => {
+            if (preview.classList.contains("hero-qr-preview")) {
+                preview.__media?.setMinimized(false);
+                return;
+            }
+            preview.__media?.setMinimized(true);
+        });
     }
     refreshMinimizedLayoutState();
 }
