@@ -1064,13 +1064,7 @@ body.media-focus-mode {
         padding: 0.56rem;
     }
 
-    .hero-main-qr {
-        width: min(100%, 270px);
-        max-width: 270px;
-        height: auto;
-    }
-
-    .hero-main-qr {
+    .slide.layout-hero-wave .slide-side {
         display: none;
     }
 
@@ -1103,8 +1097,21 @@ body.media-focus-mode {
 /* Final mobile layout fix: text first, compact media below */
 @media (max-width: 1024px) {
     .slide {
+        grid-template-columns: 1fr !important;
         grid-template-rows: minmax(0, 1fr) auto;
         gap: 0.55rem;
+    }
+
+    .slide.layout-focus-left,
+    .slide.layout-hero-wave,
+    .slide.layout-grid-poster,
+    .slide.layout-timeline-soft,
+    .slide.layout-highlight-banner,
+    .slide.layout-image-frame,
+    .slide.layout-case-columns,
+    .slide.layout-quiz-accordion,
+    .slide.layout-references-wall {
+        grid-template-columns: 1fr !important;
     }
 
     .slide-main {

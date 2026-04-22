@@ -43,7 +43,7 @@
     {
       "id": "triagem",
       "layout": "focus-left",
-      "kicker": "PASSO 1",
+      "kicker": "",
       "titulo": "Triagem pré-vacinal em 60 segundos",
       "subtitulo": "Antes da dose, valide quatro pontos essenciais",
       "imagem": "https://phil.cdc.gov/PHIL_Images/9409/9409_lores.jpg",
@@ -57,7 +57,7 @@
     {
       "id": "contraindicacoes",
       "layout": "grid-poster",
-      "kicker": "PASSO 2A",
+      "kicker": "",
       "titulo": "Quando contraindicar",
       "subtitulo": "Contraindicação verdadeira é exceção, mas precisa ser reconhecida",
       "imagem": "https://phil.cdc.gov/PHIL_Images/9417/9417_lores.jpg",
@@ -71,7 +71,7 @@
     {
       "id": "adiamento",
       "layout": "timeline-soft",
-      "kicker": "PASSO 2B",
+      "kicker": "",
       "titulo": "Quando adiar temporariamente",
       "subtitulo": "Adiar com critério, sem perder a oportunidade de vacinar",
       "imagem": "https://phil.cdc.gov/PHIL_Images/9418/9418_lores.jpg",
@@ -85,7 +85,7 @@
     {
       "id": "falsas",
       "layout": "highlight-banner",
-      "kicker": "PASSO 2C",
+      "kicker": "",
       "titulo": "Quando vacinar (falsas contraindicações)",
       "subtitulo": "Sintomas leves não devem barrar a vacinação",
       "imagem": "https://phil.cdc.gov/PHIL_Images/9423/9423_lores.jpg",
@@ -99,7 +99,7 @@
     {
       "id": "eapv",
       "layout": "image-frame",
-      "kicker": "PASSO 3",
+      "kicker": "",
       "titulo": "EAPV: reconhecer e conduzir",
       "subtitulo": "Evento pós-vacinação exige análise, não conclusão automática",
       "imagem": "https://phil.cdc.gov/PHIL_Images/21413/21413_lores.jpg",
@@ -113,7 +113,7 @@
     {
       "id": "casos",
       "layout": "case-columns",
-      "kicker": "PASSO 4",
+      "kicker": "",
       "titulo": "Casos aplicados à rotina",
       "subtitulo": "Treine o raciocínio: decidir e justificar",
       "imagem": "https://phil.cdc.gov/PHIL_Images/9410/9410_lores.jpg",
