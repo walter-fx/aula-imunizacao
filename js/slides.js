@@ -34,6 +34,7 @@ async function initDeck() {
     let current = 0;
     let wheelLock = false;
     let slideHeight = window.innerHeight;
+    const isMobileDeck = () => window.matchMedia("(max-width: 1024px)").matches;
     const getSlideNodes = () => Array.from(deck.querySelectorAll(".slide"));
     const syncMinimizedPreviewToActiveSlide = () => {
         if (document.body.classList.contains("media-focus-mode")) {
@@ -49,6 +50,9 @@ async function initDeck() {
 
         const minimizedPreviews = Array.from(document.querySelectorAll(".media-preview.media-minimized"));
         if (!minimizedPreviews.length) {
+            if (isMobileDeck() && activePreview.__media?.setMinimized) {
+                activePreview.__media.setMinimized(true);
+            }
             return;
         }
 
@@ -302,6 +306,7 @@ function bindMediaFullscreen() {
     if (!previews.length) {
         return;
     }
+    const isMobileDeck = () => window.matchMedia("(max-width: 1024px)").matches;
 
     const refreshMinimizedLayoutState = () => {
         const hasMinimized = document.querySelector(".media-preview.media-minimized") !== null;
@@ -394,6 +399,20 @@ function bindMediaFullscreen() {
         };
 
         const runSingleClickAction = () => {
+            if (isMobileDeck()) {
+                if (expanded) {
+                    close();
+                    setMinimized(true);
+                    return;
+                }
+                if (isMinimized()) {
+                    open();
+                    return;
+                }
+                setMinimized(true);
+                return;
+            }
+
             if (expanded) {
                 close();
                 return;
@@ -407,6 +426,10 @@ function bindMediaFullscreen() {
 
         media.addEventListener("click", (event) => {
             event.stopPropagation();
+            if (isMobileDeck()) {
+                runSingleClickAction();
+                return;
+            }
             if (clickTimer) {
                 clearTimeout(clickTimer);
             }
@@ -417,6 +440,9 @@ function bindMediaFullscreen() {
         });
 
         media.addEventListener("dblclick", (event) => {
+            if (isMobileDeck()) {
+                return;
+            }
             event.preventDefault();
             event.stopPropagation();
             if (clickTimer) {
@@ -432,6 +458,10 @@ function bindMediaFullscreen() {
         });
 
         preview.addEventListener("click", () => {
+            if (isMobileDeck()) {
+                runSingleClickAction();
+                return;
+            }
             if (expanded) {
                 close();
                 return;
@@ -485,6 +515,9 @@ function bindMediaFullscreen() {
         document.addEventListener("media:close", close);
     });
 
+    if (isMobileDeck()) {
+        previews.forEach((preview) => preview.__media?.setMinimized(true));
+    }
     refreshMinimizedLayoutState();
 }
 
