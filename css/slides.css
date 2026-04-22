@@ -1296,17 +1296,19 @@ body.media-focus-mode {
     }
 }
 
-/* Keep minimized media away from bottom controls on mobile */
+/* Mobile: keep minimized media visible at the bottom without blocking reading */
 @media (max-width: 1024px) {
     .media-preview.media-minimized {
         position: fixed !important;
-        top: calc(4.2rem + env(safe-area-inset-top, 0px)) !important;
-        right: 0.55rem !important;
+        top: auto !important;
+        right: 0.45rem !important;
         left: auto !important;
-        bottom: auto !important;
-        width: min(44vw, 190px) !important;
-        max-width: 190px !important;
+        bottom: calc(5.4rem + env(safe-area-inset-bottom, 0px)) !important;
+        width: min(32vw, 140px) !important;
+        max-width: 140px !important;
+        min-width: 104px !important;
         z-index: 18 !important;
+        box-shadow: 0 8px 20px rgba(36, 78, 128, 0.24) !important;
     }
 }
 
