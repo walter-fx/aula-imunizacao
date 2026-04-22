@@ -131,28 +131,6 @@
       ]
     },
     {
-      "id": "sete-certos",
-      "layout": "split-cards",
-      "kicker": "PRÁTICA SEGURA",
-      "titulo": "7 certos da enfermagem na vacinação",
-      "subtitulo": "Checklist rápido para reduzir erro e aumentar segurança",
-      "imagem": "https://phil.cdc.gov/PHIL_Images/9410/9410_lores.jpg",
-      "bullets": [
-        "Paciente certo: confirmar identificação antes da aplicação",
-        "Vacina certa: conferir nome, composição e indicação",
-        "Dose certa: validar volume e faixa etária",
-        "Via certa: intramuscular, subcutânea, oral ou intradérmica conforme protocolo",
-        "Tempo certo: respeitar calendário, intervalo e oportunidade da dose",
-        "Registro certo: lote, validade, local de aplicação e profissional",
-        "Orientação certa: explicar cuidados, sinais de alerta e retorno"
-      ],
-      "chips": [
-        "Checklist pré-aplicação",
-        "Segurança do paciente",
-        "Qualidade assistencial"
-      ]
-    },
-    {
       "id": "casos",
       "layout": "case-columns",
       "kicker": "",
