@@ -115,6 +115,7 @@ async function initDeck() {
 
     bindQuizToggle();
     bindMediaFullscreen();
+    bindMobileImageDrag();
     slideHeight = window.innerHeight;
     goTo(0);
 }
@@ -378,6 +379,89 @@ function bindMediaFullscreen() {
         });
 
         document.addEventListener("media:close", close);
+    });
+}
+
+function bindMobileImageDrag() {
+    const mobileMq = window.matchMedia("(max-width: 1024px)");
+    const sides = Array.from(document.querySelectorAll(".slide-side"));
+    if (!sides.length) {
+        return;
+    }
+
+    sides.forEach((side) => {
+        side.style.removeProperty("--media-drag-y");
+        side.classList.remove("media-collapsed");
+
+        let dragging = false;
+        let moved = false;
+        let startY = 0;
+        let startOffset = 0;
+        let currentOffset = 0;
+
+        const getMaxOffset = () => Math.max(0, side.offsetHeight - 34);
+        const applyOffset = (value) => {
+            currentOffset = Math.max(0, Math.min(getMaxOffset(), value));
+            side.style.setProperty("--media-drag-y", `${currentOffset}px`);
+        };
+
+        const snap = () => {
+            const maxOffset = getMaxOffset();
+            const shouldCollapse = currentOffset > maxOffset * 0.42;
+            applyOffset(shouldCollapse ? maxOffset : 0);
+            side.classList.toggle("media-collapsed", shouldCollapse);
+        };
+
+        side.addEventListener("pointerdown", (event) => {
+            if (!mobileMq.matches || document.body.classList.contains("media-focus-mode")) {
+                return;
+            }
+            dragging = true;
+            moved = false;
+            startY = event.clientY;
+            startOffset = currentOffset;
+            side.classList.add("media-dragging-local");
+            side.setPointerCapture?.(event.pointerId);
+        });
+
+        side.addEventListener("pointermove", (event) => {
+            if (!dragging || !mobileMq.matches) {
+                return;
+            }
+            const delta = event.clientY - startY;
+            if (Math.abs(delta) > 4) {
+                moved = true;
+            }
+            applyOffset(startOffset + delta);
+        });
+
+        side.addEventListener("pointerup", (event) => {
+            if (!dragging) {
+                return;
+            }
+            dragging = false;
+            side.classList.remove("media-dragging-local");
+            side.releasePointerCapture?.(event.pointerId);
+            if (moved) {
+                snap();
+            }
+        });
+
+        side.addEventListener("pointercancel", () => {
+            dragging = false;
+            side.classList.remove("media-dragging-local");
+            snap();
+        });
+
+        side.addEventListener("dblclick", () => {
+            if (!mobileMq.matches) {
+                return;
+            }
+            const maxOffset = getMaxOffset();
+            const collapsed = side.classList.contains("media-collapsed");
+            applyOffset(collapsed ? 0 : maxOffset);
+            side.classList.toggle("media-collapsed", !collapsed);
+        });
     });
 }
 

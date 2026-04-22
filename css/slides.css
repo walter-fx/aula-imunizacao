@@ -1122,6 +1122,34 @@ body.media-focus-mode {
     .slide-side {
         max-height: 24vh;
         overflow: hidden;
+        transform: translateY(var(--media-drag-y, 0px));
+        transition: transform 220ms ease;
+        touch-action: pan-y;
+        will-change: transform;
+    }
+
+    .slide-side.media-dragging-local {
+        transition: none;
+    }
+
+    .slide-side::after {
+        content: "arraste a imagem";
+        position: absolute;
+        right: 0.5rem;
+        bottom: 0.45rem;
+        z-index: 2;
+        padding: 0.15rem 0.42rem;
+        border-radius: 999px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        color: #245581;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid #d6e6fb;
+        pointer-events: none;
+    }
+
+    .slide-side.media-collapsed::after {
+        content: "imagem minimizada";
     }
 
     .slide-side .hero-site-topbar {
@@ -1150,6 +1178,10 @@ body.media-focus-mode {
 
     .slide-side {
         max-height: 19vh;
+    }
+
+    .slide-side::after {
+        font-size: 0.62rem;
     }
 
     .slide-side .media-main-image,
