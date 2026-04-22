@@ -244,6 +244,9 @@ function renderSlide(slide, index, meta) {
                     <span class="address-bar">walter-fx.github.io/aula-imunizacao</span>
                 </div>
                 <div class="hero-site-body hero-qr-body">
+                    <div class="media-loader" aria-hidden="true">
+                        <span class="media-loader-spinner"></span>
+                    </div>
                     <img class="hero-main-qr" src="assets/qr/qr-code.png" alt="QR Code da aula" loading="lazy" />
                 </div>
             </div>
@@ -277,6 +280,9 @@ function renderImage(src, alt) {
                 <span class="address-bar">walter-fx.github.io/aula-imunizacao</span>
             </div>
             <div class="media-window-body">
+                <div class="media-loader" aria-hidden="true">
+                    <span class="media-loader-spinner"></span>
+                </div>
                 <img class="media-main-image" src="${src}" alt="${escapeHtml(alt)}" loading="lazy" />
             </div>
         </div>
@@ -330,6 +336,15 @@ function bindMediaFullscreen() {
         const media = preview.querySelector("img");
         if (!media) {
             return;
+        }
+        preview.classList.add("is-loading");
+        const finishLoading = () => {
+            preview.classList.remove("is-loading");
+        };
+        media.addEventListener("load", finishLoading, { once: true });
+        media.addEventListener("error", finishLoading, { once: true });
+        if (media.complete && media.naturalWidth > 0) {
+            finishLoading();
         }
 
         media.setAttribute("draggable", "false");
