@@ -34,8 +34,19 @@ async function initDeck() {
     let current = 0;
     let wheelLock = false;
     let slideHeight = window.innerHeight;
+    let touchStartedInsideScrollable = false;
     const isMobileDeck = () => window.matchMedia("(max-width: 1024px)").matches;
     const getSlideNodes = () => Array.from(deck.querySelectorAll(".slide"));
+    const getScrollableContainer = (target) => {
+        if (!(target instanceof Element)) {
+            return null;
+        }
+        const container = target.closest(".slide-main");
+        if (!container) {
+            return null;
+        }
+        return container.scrollHeight > container.clientHeight + 2 ? container : null;
+    };
     const syncMinimizedPreviewToActiveSlide = () => {
         if (document.body.classList.contains("media-focus-mode")) {
             return;
@@ -136,6 +147,9 @@ async function initDeck() {
         if (document.body.classList.contains("media-focus-mode")) {
             return;
         }
+        if (getScrollableContainer(event.target)) {
+            return;
+        }
         if (wheelLock || Math.abs(event.deltaY) < 24) {
             return;
         }
@@ -151,10 +165,15 @@ async function initDeck() {
     let startY = 0;
     window.addEventListener("touchstart", (event) => {
         startY = event.changedTouches[0].clientY;
+        touchStartedInsideScrollable = Boolean(getScrollableContainer(event.target));
     }, { passive: true });
 
     window.addEventListener("touchend", (event) => {
         if (document.body.classList.contains("media-focus-mode")) {
+            return;
+        }
+        if (touchStartedInsideScrollable) {
+            touchStartedInsideScrollable = false;
             return;
         }
         const delta = startY - event.changedTouches[0].clientY;
