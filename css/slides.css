@@ -1294,8 +1294,8 @@ body.media-focus-mode {
     }
 
     .slide-main {
-        height: calc(var(--app-height) - 10.2rem);
-        max-height: calc(var(--app-height) - 10.2rem);
+        height: auto !important;
+        max-height: calc(var(--app-height) - 11.9rem);
         overflow: auto;
         align-self: center !important;
     }
@@ -1330,8 +1330,8 @@ body.media-focus-mode {
     }
 
     body.has-minimized-media .slide-main {
-        height: calc(var(--app-height) - 10.2rem) !important;
-        max-height: calc(var(--app-height) - 10.2rem) !important;
+        height: auto !important;
+        max-height: calc(var(--app-height) - 11.9rem) !important;
     }
 }
 
@@ -1341,8 +1341,8 @@ body.media-focus-mode {
     }
 
     .slide-main {
-        height: calc(var(--app-height) - 10.6rem) !important;
-        max-height: calc(var(--app-height) - 10.6rem) !important;
+        height: auto !important;
+        max-height: calc(var(--app-height) - 12.2rem) !important;
         padding: 0.78rem;
     }
 
