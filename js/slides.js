@@ -106,6 +106,9 @@ async function initDeck() {
         if (document.body.classList.contains("media-focus-mode")) {
             return;
         }
+        if (window.__blockSlideSwipeUntil && Date.now() < window.__blockSlideSwipeUntil) {
+            return;
+        }
         const delta = startY - event.changedTouches[0].clientY;
         if (Math.abs(delta) < 45) {
             return;
@@ -412,46 +415,79 @@ function bindMobileImageDrag() {
             side.classList.toggle("media-collapsed", shouldCollapse);
         };
 
-        side.addEventListener("pointerdown", (event) => {
-            if (!mobileMq.matches || document.body.classList.contains("media-focus-mode")) {
-                return;
-            }
+        const beginDrag = (clientY) => {
             dragging = true;
             moved = false;
-            startY = event.clientY;
+            startY = clientY;
             startOffset = currentOffset;
             side.classList.add("media-dragging-local");
-            side.setPointerCapture?.(event.pointerId);
-        });
+        };
 
-        side.addEventListener("pointermove", (event) => {
+        const updateDrag = (clientY) => {
             if (!dragging || !mobileMq.matches) {
                 return;
             }
-            const delta = event.clientY - startY;
+            const delta = clientY - startY;
             if (Math.abs(delta) > 4) {
                 moved = true;
+                window.__blockSlideSwipeUntil = Date.now() + 320;
             }
             applyOffset(startOffset + delta);
-        });
+        };
 
-        side.addEventListener("pointerup", (event) => {
+        const endDrag = () => {
             if (!dragging) {
                 return;
             }
             dragging = false;
             side.classList.remove("media-dragging-local");
-            side.releasePointerCapture?.(event.pointerId);
             if (moved) {
                 snap();
             }
+        };
+
+        side.addEventListener("pointerdown", (event) => {
+            if (!mobileMq.matches || document.body.classList.contains("media-focus-mode")) {
+                return;
+            }
+            beginDrag(event.clientY);
+            side.setPointerCapture?.(event.pointerId);
+        });
+
+        side.addEventListener("pointermove", (event) => {
+            updateDrag(event.clientY);
+        });
+
+        side.addEventListener("pointerup", (event) => {
+            if (!mobileMq.matches) {
+                return;
+            }
+            side.releasePointerCapture?.(event.pointerId);
+            endDrag();
         });
 
         side.addEventListener("pointercancel", () => {
-            dragging = false;
-            side.classList.remove("media-dragging-local");
-            snap();
+            endDrag();
         });
+
+        side.addEventListener("touchstart", (event) => {
+            if (!mobileMq.matches || document.body.classList.contains("media-focus-mode")) {
+                return;
+            }
+            beginDrag(event.changedTouches[0].clientY);
+        }, { passive: true });
+
+        side.addEventListener("touchmove", (event) => {
+            if (!dragging || !mobileMq.matches) {
+                return;
+            }
+            updateDrag(event.changedTouches[0].clientY);
+            event.preventDefault();
+        }, { passive: false });
+
+        side.addEventListener("touchend", () => {
+            endDrag();
+        }, { passive: true });
 
         side.addEventListener("dblclick", () => {
             if (!mobileMq.matches) {

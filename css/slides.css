@@ -938,8 +938,9 @@ body.media-focus-mode {
     #prevBtn,
     #nextBtn {
         position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
+        top: auto;
+        bottom: calc(0.55rem + env(safe-area-inset-bottom, 0px));
+        transform: none;
         z-index: 12;
         pointer-events: auto;
     }
@@ -1136,6 +1137,51 @@ body.media-focus-mode {
 
 /* Final mobile layout fix: text first, compact media below */
 @media (max-width: 1024px) {
+    .deck-controls {
+        position: fixed !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px)) !important;
+        top: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        display: block !important;
+        pointer-events: none !important;
+        z-index: 12 !important;
+    }
+
+    #prevBtn,
+    #nextBtn {
+        position: fixed !important;
+        top: auto !important;
+        bottom: calc(0.55rem + env(safe-area-inset-bottom, 0px)) !important;
+        transform: none !important;
+        z-index: 12 !important;
+        pointer-events: auto !important;
+    }
+
+    #prevBtn { left: 0.35rem !important; }
+    #nextBtn { right: 0.35rem !important; }
+
+    .ctrl-center {
+        position: fixed !important;
+        left: 50% !important;
+        bottom: calc(0.45rem + env(safe-area-inset-bottom, 0px)) !important;
+        transform: translateX(-50%) !important;
+        width: calc(100% - 7rem) !important;
+        max-width: 420px !important;
+        background: rgba(255, 255, 255, 0.92) !important;
+        border: 1px solid #d6e5f7 !important;
+        border-radius: 0.72rem !important;
+        padding: 0.34rem 0.44rem !important;
+        z-index: 12 !important;
+        pointer-events: auto !important;
+    }
+
     .slide {
         grid-template-columns: 1fr !important;
         grid-template-rows: minmax(0, 1fr) auto;
