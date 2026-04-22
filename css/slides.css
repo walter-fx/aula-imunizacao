@@ -1175,6 +1175,12 @@ body.media-focus-mode {
 
 /* Final mobile layout fix: text first, compact media below */
 @media (max-width: 1024px) {
+    .ctrl-btn.icon-only {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 0.8rem !important;
+    }
+
     .deck-controls {
         position: fixed !important;
         left: 50% !important;
