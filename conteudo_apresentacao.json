@@ -14,7 +14,7 @@
       "kicker": "AULA IMERSIVA",
       "titulo": "Decisão vacinal com segurança e clareza",
       "subtitulo": "Uma lógica simples para acertar a conduta na sala de vacina",
-      "imagem": "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1600&q=80",
+      "imagem": "https://phil.cdc.gov/PHIL_Images/20116/20116_lores.jpg",
       "bullets": [
         "Meta da aula: reduzir oportunidades perdidas de vacinação",
         "Você sairá com um fluxo de decisão aplicável no plantão",
@@ -27,7 +27,7 @@
       "kicker": "OBJETIVOS",
       "titulo": "Resultados esperados ao final",
       "subtitulo": "O que precisa ficar sólido para a prática",
-      "imagem": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1600&q=80",
+      "imagem": "https://phil.cdc.gov/PHIL_Images/14277/14277_lores.jpg",
       "bullets": [
         "Diferenciar contraindicação verdadeira de falsa contraindicação",
         "Reconhecer situações de adiamento temporário",
@@ -46,7 +46,7 @@
       "kicker": "PASSO 1",
       "titulo": "Triagem pré-vacinal em 60 segundos",
       "subtitulo": "Antes da dose, valide quatro pontos essenciais",
-      "imagem": "https://images.unsplash.com/photo-1631217868264-e6b90bb7e133?auto=format&fit=crop&w=1600&q=80",
+      "imagem": "https://phil.cdc.gov/PHIL_Images/9409/9409_lores.jpg",
       "bullets": [
         "Estado clínico atual: leve, moderado ou grave",
         "Histórico de reação grave a dose/componente",
@@ -60,7 +60,7 @@
       "kicker": "PASSO 2A",
       "titulo": "Quando contraindicar",
       "subtitulo": "Contraindicação verdadeira é exceção, mas precisa ser reconhecida",
-      "imagem": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1600&q=80",
+      "imagem": "https://phil.cdc.gov/PHIL_Images/9417/9417_lores.jpg",
       "bullets": [
         "Imunodeficiência importante para vacinas vivas atenuadas",
         "Neoplasia maligna em atividade",
@@ -74,7 +74,7 @@
       "kicker": "PASSO 2B",
       "titulo": "Quando adiar temporariamente",
       "subtitulo": "Adiar com critério, sem perder a oportunidade de vacinar",
-      "imagem": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
+      "imagem": "https://phil.cdc.gov/PHIL_Images/9418/9418_lores.jpg",
       "bullets": [
         "Doença febril moderada ou grave no dia da aplicação",
         "Uso recente de hemoderivados em vacinas específicas",
@@ -88,7 +88,7 @@
       "kicker": "PASSO 2C",
       "titulo": "Quando vacinar (falsas contraindicações)",
       "subtitulo": "Sintomas leves não devem barrar a vacinação",
-      "imagem": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&q=80",
+      "imagem": "https://phil.cdc.gov/PHIL_Images/9423/9423_lores.jpg",
       "bullets": [
         "Resfriado leve com estado geral preservado",
         "Coriza, tosse leve e diarreia leve/moderada",
@@ -102,7 +102,7 @@
       "kicker": "PASSO 3",
       "titulo": "EAPV: reconhecer e conduzir",
       "subtitulo": "Evento pós-vacinação exige análise, não conclusão automática",
-      "imagem": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80",
+      "imagem": "https://phil.cdc.gov/PHIL_Images/21413/21413_lores.jpg",
       "bullets": [
         "Eventos esperados: dor local, febre baixa, mal-estar",
         "Eventos graves: investigar e classificar adequadamente",
@@ -116,7 +116,7 @@
       "kicker": "PASSO 4",
       "titulo": "Casos aplicados à rotina",
       "subtitulo": "Treine o raciocínio: decidir e justificar",
-      "imagem": "https://images.unsplash.com/photo-1551887373-6bbfc7e134a3?auto=format&fit=crop&w=1600&q=80",
+      "imagem": "https://phil.cdc.gov/PHIL_Images/9410/9410_lores.jpg",
       "casos": [
         {
           "titulo": "Resfriado leve no dia da vacina",
@@ -141,7 +141,7 @@
       "kicker": "REVISÃO FINAL",
       "titulo": "5 perguntas do conteúdo visto",
       "subtitulo": "Cada resposta corresponde aos pontos apresentados nos slides",
-      "imagem": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+      "imagem": "https://phil.cdc.gov/PHIL_Images/9416/9416_lores.jpg",
       "questoes": [
         {
           "pergunta": "Na triagem de 60 segundos, quais quatro pontos devem ser verificados antes da dose?",
@@ -171,7 +171,7 @@
       "kicker": "REFERÊNCIAS",
       "titulo": "Fontes oficiais para consulta",
       "subtitulo": "Base técnica utilizada na aula",
-      "imagem": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=1600&q=80",
+      "imagem": "https://phil.cdc.gov/PHIL_Images/17506/17506_lores.jpg",
       "referencias": [
         "Brasil. Ministério da Saúde. Manual - Normas e Procedimentos para Vacinação. 2ª ed. revisada, 2024.",
         "Brasil. Ministério da Saúde. Manual de vigilância epidemiológica de eventos adversos pós-vacinação. 4ª ed. atualizada, 2021/2023.",

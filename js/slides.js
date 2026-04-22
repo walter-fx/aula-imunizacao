@@ -1,5 +1,6 @@
 ﻿window.addEventListener("DOMContentLoaded", () => {
     initClassClock();
+    setAppHeight();
     initDeck().catch((error) => {
         console.error(error);
         renderError(error.message || "Erro ao carregar slides.");
@@ -32,10 +33,11 @@ async function initDeck() {
 
     let current = 0;
     let wheelLock = false;
+    let slideHeight = window.innerHeight;
 
     function goTo(index) {
         current = clamp(index, 0, slides.length - 1);
-        deck.style.transform = `translateY(-${current * 100}vh)`;
+        deck.style.transform = `translateY(-${current * slideHeight}px)`;
 
         Array.from(deck.querySelectorAll(".slide")).forEach((node, idx) => {
             node.classList.toggle("is-active", idx === current);
@@ -56,8 +58,19 @@ async function initDeck() {
 
     prevBtn.addEventListener("click", prev);
     nextBtn.addEventListener("click", next);
+    window.addEventListener("resize", () => {
+        setAppHeight();
+        slideHeight = window.innerHeight;
+        goTo(current);
+    });
 
     window.addEventListener("keydown", (event) => {
+        if (document.body.classList.contains("media-focus-mode")) {
+            if (event.key === "Escape") {
+                document.dispatchEvent(new CustomEvent("media:close"));
+            }
+            return;
+        }
         if (["ArrowRight"].includes(event.key)) {
             event.preventDefault();
             next();
@@ -69,6 +82,9 @@ async function initDeck() {
     });
 
     window.addEventListener("wheel", (event) => {
+        if (document.body.classList.contains("media-focus-mode")) {
+            return;
+        }
         if (wheelLock || Math.abs(event.deltaY) < 24) {
             return;
         }
@@ -87,6 +103,9 @@ async function initDeck() {
     }, { passive: true });
 
     window.addEventListener("touchend", (event) => {
+        if (document.body.classList.contains("media-focus-mode")) {
+            return;
+        }
         const delta = startY - event.changedTouches[0].clientY;
         if (Math.abs(delta) < 45) {
             return;
@@ -95,6 +114,8 @@ async function initDeck() {
     }, { passive: true });
 
     bindQuizToggle();
+    bindMediaFullscreen();
+    slideHeight = window.innerHeight;
     goTo(0);
 }
 
@@ -164,28 +185,16 @@ function renderSlide(slide, index, meta) {
 
     if (layout === "hero-wave") {
         sideBody = `
-            <div class="hero-site-preview">
+            <div class="hero-site-preview hero-qr-preview media-preview" data-media-preview>
                 <div class="hero-site-topbar">
                     <span class="browser-dot red"></span>
                     <span class="browser-dot yellow"></span>
                     <span class="browser-dot green"></span>
-                    <span class="address-bar">imunizacao.aula/seguranca-vacinal</span>
+                    <span class="address-bar">walter-fx.github.io/aula-imunizacao</span>
                 </div>
-                <div class="hero-site-body">
-                    <img src="${img}" alt="${escapeHtml(slide.titulo || "")}" loading="lazy" />
-                    <div class="hero-site-overlay">
-                        <span class="badge">Aula ao vivo</span>
-                        <h3>Decisão clínica rápida</h3>
-                        <p>Contraindicação, adiamento e EAPV no mesmo fluxo mental.</p>
-                        <div class="cta-row">
-                            <span class="mini-btn">Iniciar</span>
-                            <span class="mini-btn alt">Ver casos</span>
-                        </div>
-                    </div>
+                <div class="hero-site-body hero-qr-body">
+                    <img class="hero-main-qr" src="assets/qr/qr-code.png" alt="QR Code da aula" loading="lazy" />
                 </div>
-                <div class="pulse-ring ring-a"></div>
-                <div class="pulse-ring ring-b"></div>
-                <div class="pulse-ring ring-c"></div>
             </div>
         `;
         mainBody = `
@@ -209,9 +218,17 @@ function renderSlide(slide, index, meta) {
 
 function renderImage(src, alt) {
     return `
-        <figure class="image-frame">
-            <img src="${src}" alt="${escapeHtml(alt)}" loading="lazy" />
-        </figure>
+        <div class="hero-site-preview media-preview" data-media-preview>
+            <div class="hero-site-topbar">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+                <span class="address-bar">walter-fx.github.io/aula-imunizacao</span>
+            </div>
+            <div class="media-window-body">
+                <img class="media-main-image" src="${src}" alt="${escapeHtml(alt)}" loading="lazy" />
+            </div>
+        </div>
     `;
 }
 
@@ -243,6 +260,124 @@ function bindQuizToggle() {
             btn.setAttribute("aria-expanded", String(!isOpen));
             answer.style.maxHeight = !isOpen ? `${answer.scrollHeight + 16}px` : "0px";
         });
+    });
+}
+
+function bindMediaFullscreen() {
+    const previews = Array.from(document.querySelectorAll("[data-media-preview]"));
+    if (!previews.length) {
+        return;
+    }
+
+    previews.forEach((preview) => {
+        const media = preview.querySelector("img");
+        if (!media) {
+            return;
+        }
+
+        media.setAttribute("draggable", "false");
+        let expanded = false;
+        let dragging = false;
+        let startX = 0;
+        let startY = 0;
+        let dx = 0;
+        let dy = 0;
+        const originalParent = preview.parentElement;
+        const originalNext = preview.nextSibling;
+
+        const clearDrag = () => {
+            preview.style.removeProperty("--drag-x");
+            preview.style.removeProperty("--drag-y");
+            preview.style.removeProperty("--drag-rot");
+            preview.classList.remove("media-dragging");
+            dx = 0;
+            dy = 0;
+        };
+
+        const close = () => {
+            if (!expanded) {
+                return;
+            }
+            expanded = false;
+            clearDrag();
+            preview.classList.remove("media-expanded");
+            document.body.classList.remove("media-focus-mode");
+            if (originalParent) {
+                if (originalNext && originalNext.parentNode === originalParent) {
+                    originalParent.insertBefore(preview, originalNext);
+                } else {
+                    originalParent.appendChild(preview);
+                }
+            }
+        };
+
+        const open = () => {
+            if (expanded) {
+                return;
+            }
+            expanded = true;
+            document.body.appendChild(preview);
+            preview.classList.add("media-expanded");
+            document.body.classList.add("media-focus-mode");
+        };
+
+        const toggle = () => {
+            expanded ? close() : open();
+        };
+
+        media.addEventListener("click", (event) => {
+            event.stopPropagation();
+            toggle();
+        });
+
+        preview.addEventListener("click", () => {
+            if (expanded) {
+                close();
+            }
+        });
+
+        preview.addEventListener("pointerdown", (event) => {
+            if (!expanded) {
+                return;
+            }
+            dragging = true;
+            startX = event.clientX;
+            startY = event.clientY;
+            preview.classList.add("media-dragging");
+            preview.setPointerCapture?.(event.pointerId);
+        });
+
+        preview.addEventListener("pointermove", (event) => {
+            if (!expanded || !dragging) {
+                return;
+            }
+            dx = event.clientX - startX;
+            dy = event.clientY - startY;
+            preview.style.setProperty("--drag-x", `${dx}px`);
+            preview.style.setProperty("--drag-y", `${dy}px`);
+            preview.style.setProperty("--drag-rot", `${dx * 0.03}deg`);
+        });
+
+        preview.addEventListener("pointerup", (event) => {
+            if (!expanded || !dragging) {
+                return;
+            }
+            dragging = false;
+            preview.releasePointerCapture?.(event.pointerId);
+            const distance = Math.hypot(dx, dy);
+            if (distance > 140) {
+                close();
+                return;
+            }
+            clearDrag();
+        });
+
+        preview.addEventListener("pointercancel", () => {
+            dragging = false;
+            clearDrag();
+        });
+
+        document.addEventListener("media:close", close);
     });
 }
 
@@ -321,4 +456,8 @@ function initClassClock() {
 
     updateClock();
     window.setInterval(updateClock, 1000);
+}
+
+function setAppHeight() {
+    document.documentElement.style.setProperty("--app-height", `${window.innerHeight}px`);
 }
