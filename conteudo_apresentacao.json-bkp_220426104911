@@ -301,7 +301,7 @@
       "id": "quiz",
       "layout": "quiz-accordion",
       "kicker": "REVISÃO FINAL",
-      "titulo": "10 perguntas do conteúdo visto",
+      "titulo": "5 perguntas do conteúdo visto",
       "subtitulo": "Cada resposta corresponde aos pontos apresentados nos slides",
       "imagem": "https://phil.cdc.gov/PHIL_Images/9416/9416_lores.jpg",
       "questoes": [
@@ -324,26 +324,6 @@
         {
           "pergunta": "No caso com dor local e febre baixa após vacina, qual conduta foi apresentada?",
           "resposta": "Tratar como evento esperado, orientar sinais de alerta e registrar corretamente."
-        },
-        {
-          "pergunta": "Qual é a contraindicação principal das vacinas vivas atenuadas apresentada na aula?",
-          "resposta": "Imunossupressão importante e gestação, além de anafilaxia prévia a dose ou componente."
-        },
-        {
-          "pergunta": "Qual tipo de vacina usa toxinas inativadas para proteger o paciente?",
-          "resposta": "As vacinas toxoides, como dT e dTpa."
-        },
-        {
-          "pergunta": "Qual vacina foi destacada como podendo ser aplicada em qualquer fase da gestação?",
-          "resposta": "A vacina influenza inativada."
-        },
-        {
-          "pergunta": "Nos 7 certos da enfermagem, quais itens devem obrigatoriamente entrar no registro certo?",
-          "resposta": "Lote, validade, local de aplicação e identificação do profissional."
-        },
-        {
-          "pergunta": "Nas vacinas de mRNA, qual componente foi citado como exemplo de alergia grave para contraindicação?",
-          "resposta": "PEG (polietilenoglicol), além de anafilaxia após dose anterior."
         }
       ]
     },
