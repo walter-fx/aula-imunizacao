@@ -919,12 +919,51 @@ body.media-focus-mode {
 
 @media (max-width: 640px) {
     .deck-controls {
-        grid-template-columns: 1fr 1fr;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+        width: 100%;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        padding: 0;
+        display: block;
+        pointer-events: none;
+    }
+
+    #prevBtn,
+    #nextBtn {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 12;
+        pointer-events: auto;
+    }
+
+    #prevBtn {
+        left: 0.35rem;
+    }
+
+    #nextBtn {
+        right: 0.35rem;
     }
 
     .ctrl-center {
-        order: -1;
-        grid-column: 1 / -1;
+        position: fixed;
+        left: 50%;
+        bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+        transform: translateX(-50%);
+        width: calc(100% - 7rem);
+        max-width: 420px;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid #d6e5f7;
+        border-radius: 0.72rem;
+        padding: 0.34rem 0.44rem;
+        z-index: 12;
+        pointer-events: auto;
     }
 
     .rail {
