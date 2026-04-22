@@ -684,8 +684,25 @@ h3 {
 @media (max-width: 1024px) {
     .slide {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
         align-content: start;
         padding-bottom: 8.3rem;
+    }
+
+    .slide-main {
+        order: 1;
+    }
+
+    .slide-side {
+        order: 2;
+        width: 100%;
+        margin-top: 0.15rem;
+    }
+
+    .slide-side .hero-site-preview,
+    .slide-side .image-frame,
+    .slide-side .media-preview {
+        width: 100%;
     }
 
     .image-frame img,
@@ -1080,6 +1097,60 @@ body.media-focus-mode {
     .quiz-question,
     .dot {
         touch-action: manipulation;
+    }
+}
+
+/* Final mobile layout fix: text first, compact media below */
+@media (max-width: 1024px) {
+    .slide {
+        grid-template-rows: minmax(0, 1fr) auto;
+        gap: 0.55rem;
+    }
+
+    .slide-main {
+        max-height: calc(var(--app-height) - 15rem);
+        overflow: auto;
+    }
+
+    .slide-side {
+        max-height: 24vh;
+        overflow: hidden;
+    }
+
+    .slide-side .hero-site-topbar {
+        padding: 0.4rem 0.55rem;
+    }
+
+    .slide-side .media-main-image,
+    .slide-side .hero-site-body img:not(.hero-main-qr),
+    .slide-side .image-frame img {
+        height: 20vh !important;
+        min-height: 110px;
+        max-height: 170px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 640px) {
+    .slide {
+        gap: 0.48rem;
+    }
+
+    .slide-main {
+        max-height: calc(var(--app-height) - 15.8rem);
+        padding: 0.78rem;
+    }
+
+    .slide-side {
+        max-height: 19vh;
+    }
+
+    .slide-side .media-main-image,
+    .slide-side .hero-site-body img:not(.hero-main-qr),
+    .slide-side .image-frame img {
+        height: 16vh !important;
+        min-height: 90px;
+        max-height: 130px;
     }
 }
 
