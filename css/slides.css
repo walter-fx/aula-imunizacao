@@ -152,6 +152,8 @@ body {
 .slide-side {
     transform: translateX(44px) rotate(-1deg);
     opacity: 0;
+    border-radius: 0 0 1.1rem 1.1rem;
+    overflow: hidden;
     transition: transform 760ms cubic-bezier(0.22, 1, 0.36, 1), opacity 760ms ease;
 }
 
