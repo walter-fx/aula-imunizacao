@@ -937,6 +937,7 @@ body.media-focus-mode {
     max-height: calc(var(--app-height) - 120px);
     height: auto;
     object-fit: contain;
+    border-radius: 1.1rem;
     background: #fff;
     border-color: #e6edf8;
     box-shadow: 0 24px 52px rgba(0, 0, 0, 0.34);
